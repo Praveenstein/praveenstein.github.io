@@ -1,0 +1,1079 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.4.0, mkdocs-material-8.5.6" name="generator"/>
+<title>Back End Services - SMDDC 2.0 IIOT Project Documentation</title>
+<link href="../../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
+<meta content="#009485" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gdesc-inner { font-size: 0.75rem; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="teal" data-md-color-primary="teal" data-md-color-scheme="" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#back-end">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="SMDDC 2.0 IIOT Project Documentation" class="md-header__button md-logo" data-md-component="logo" href="../.." title="SMDDC 2.0 IIOT Project Documentation">
+<img alt="logo" src="../../images/cmti_logo_full_white_no_border.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            SMDDC 2.0 IIOT Project Documentation
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Back End Services
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="SMDDC 2.0 IIOT Project Documentation" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="SMDDC 2.0 IIOT Project Documentation">
+<img alt="logo" src="../../images/cmti_logo_full_white_no_border.png"/>
+</a>
+    SMDDC 2.0 IIOT Project Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Project Overview
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../user_interfaces/">
+        User Interface
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Technical%20Stack/">
+        Technical Stack
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Code%20%26%20Services%20Locations/">
+        Codes &amp; Services Location
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+          Code Explanation
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Code Explanation" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Code Explanation
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Collector/">
+        Collector Services
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Back End Services
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Back End Services
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction">
+    Introduction
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-layout">
+    Project layout
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#api-endpoints">
+    API Endpoints
+  </a>
+<nav aria-label="API Endpoints" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#core-data-route">
+    Core Data Route
+  </a>
+<nav aria-label="Core Data Route" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#get-end-points">
+    Get End Points
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#post-end-points">
+    Post End Points
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#put-end-points">
+    Put End Points
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#delete-end-points">
+    Delete End Points
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#security-route">
+    Security Route
+  </a>
+<nav aria-label="Security Route" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#post-end-points_1">
+    Post End Points
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+          General Knowledge
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="General Knowledge" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          General Knowledge
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../General%20Knowledge/OPC%20UA/">
+        Opc Ua
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../General%20Knowledge/KPI%20in%20Manufacturing/">
+        KPIs in Manufacturing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../General%20Knowledge/Focas/">
+        Focas
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+          Project Knowledge
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Project Knowledge" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          Project Knowledge
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Project%20Knowledge/Machines/">
+        Machines
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Project%20Knowledge/KPI%20Calculations/">
+        KPIs Calculations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Project%20Knowledge/KPI%20Calculations%20%28CMTI%29/">
+        KPIs Calculations (CMTI)
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Troubleshoot_Faq/">
+        Troubleshooting &amp; FAQ
+      </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction">
+    Introduction
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-layout">
+    Project layout
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#api-endpoints">
+    API Endpoints
+  </a>
+<nav aria-label="API Endpoints" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#core-data-route">
+    Core Data Route
+  </a>
+<nav aria-label="Core Data Route" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#get-end-points">
+    Get End Points
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#post-end-points">
+    Post End Points
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#put-end-points">
+    Put End Points
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#delete-end-points">
+    Delete End Points
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#security-route">
+    Security Route
+  </a>
+<nav aria-label="Security Route" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#post-end-points_1">
+    Post End Points
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="back-end">Back End</h1>
+<h2 id="introduction">Introduction</h2>
+<p>The requirements for the back end are:</p>
+<ol>
+<li>
+<p>anyio==3.5.0</p>
+</li>
+<li>
+<p>asgiref==3.5.1</p>
+</li>
+<li>
+<p>bcrypt==3.2.2</p>
+</li>
+<li>
+<p>cffi==1.15.1</p>
+</li>
+<li>
+<p>click==8.1.3</p>
+</li>
+<li>
+<p>colorama==0.4.4</p>
+</li>
+<li>
+<p>cryptography==37.0.4</p>
+</li>
+<li>
+<p>databases==0.5.5</p>
+</li>
+<li>
+<p>ecdsa==0.18.0</p>
+</li>
+<li>
+<p>et-xmlfile==1.1.0</p>
+</li>
+<li>
+<p>fastapi==0.75.2</p>
+</li>
+<li>
+<p>greenlet==1.1.2</p>
+</li>
+<li>
+<p>h11==0.13.0</p>
+</li>
+<li>
+<p>idna==3.3</p>
+</li>
+<li>
+<p>motor==3.0.0</p>
+</li>
+<li>
+<p>numpy==1.22.4</p>
+</li>
+<li>
+<p>openpyxl==3.0.10</p>
+</li>
+<li>
+<p>pandas==1.4.2</p>
+</li>
+<li>
+<p>passlib==1.7.4</p>
+</li>
+<li>
+<p>pony==0.7.16</p>
+</li>
+<li>
+<p>psycopg2==2.9.3</p>
+</li>
+<li>
+<p>pyasn1==0.4.8</p>
+</li>
+<li>
+<p>pycparser==2.21</p>
+</li>
+<li>
+<p>pydantic==1.9.0</p>
+</li>
+<li>
+<p>pymongo==4.1.1</p>
+</li>
+<li>
+<p>python-dateutil==2.8.2</p>
+</li>
+<li>
+<p>python-dotenv==0.20.0</p>
+</li>
+<li>
+<p>python-jose==3.3.0</p>
+</li>
+<li>
+<p>python-multipart==0.0.5</p>
+</li>
+<li>
+<p>pytz==2022.1</p>
+</li>
+<li>
+<p>rsa==4.9</p>
+</li>
+<li>
+<p>six==1.16.0</p>
+</li>
+<li>
+<p>sniffio==1.2.0</p>
+</li>
+<li>
+<p>SQLAlchemy==1.4.35</p>
+</li>
+<li>
+<p>sqlalchemy2-stubs==0.0.2a22</p>
+</li>
+<li>
+<p>sqlmodel==0.0.6</p>
+</li>
+<li>
+<p>starlette==0.17.1</p>
+</li>
+<li>
+<p>typing_extensions==4.2.0</p>
+</li>
+<li>
+<p>uvicorn==0.17.6</p>
+</li>
+<li>
+<p>XlsxWriter~=3.0.3</p>
+</li>
+<li>
+<p>schedule~=1.1.0</p>
+</li>
+</ol>
+<h2 id="project-layout">Project layout</h2>
+<pre><code>main.py                         # The main entry point for the fastapi backend
+                                # application.
+machine_monitoring_app/
+    database/                   # This python package consist of modules related
+                                # to database.
+        __init__.py             # The Initialization file for the python package.
+        crud_operations.py      # This python module consist of functions to help
+                                # in database CRUD operations.
+        db_utils.py             # This python module consist of utility functions
+                                # to help in timescaledb operations.
+        mongo_db_utils.py       # This python module consist of utility functions
+                                # to help in mongodb operations.
+        mongodb_client.py       # This python module consist of functions to help
+                                # connect with mongodb.
+        pony_models.py          # This python module consist of classes for the
+                                # ORMs with timescaledb.
+    exception_handling/         # This python package consist of modules related
+                                # to exception handling.
+        __init__.py             # The Initialization file for the python package.
+        custom_exception.py     # This python module consist of classes for custom
+                                # exception handling.
+    models/                     # This python package consist of modules for the
+                                # pydantic classes.
+        __init__.py             # The Initialization file for the python package.
+        base_data_models.py     # The file consist of base pydantic models.
+        request_models.py       # The file consist of pydantic models that are used
+                                # for request body.
+        response_models.py      # The file consist of pydantic models that are used
+                                # for response body.
+    router/                     # The package consist of all endpoint of this backend.
+        __init__.py             # The Initialization file for the python package.
+        core_data_route.py      # The consist of core end points for this back end.
+        router_dependencies.py  # The file consist of functions to help other end points
+                                # Such as user authentication using jwt tokens.
+        security_routes.py      # The file consist of endpoint for user creation
+                                # and login methods.
+    utils/                      # The package consist of utility modules
+        __init__.py             # The Initialization file for the python package.
+        configuration_helper.py # The consist of functions to help in configuration
+                                # Such as logger configuration, database configuration, and 
+                                # Initial server configuration.
+        global_variables.py     # The file consist of function to return some common
+                                # Global variables.
+    __init__.py                 # The Initialization file for the python package.
+</code></pre>
+<h2 id="api-endpoints">API Endpoints</h2>
+<p>The back end exposes api's to carry out different functionalites of the web application. The end points are classified into two type, core data routes and security routes. They are explained below.</p>
+<h3 id="core-data-route">Core Data Route</h3>
+<p>These set of end points consist of all the core routes requrired for data access and manipulation.</p>
+<h4 id="get-end-points">Get End Points</h4>
+<p>These are end points used to access data.</p>
+<ol>
+<li>
+<p><strong>/api/v1/machine-state/{parameterGroupId}</strong> - This end point is used to get the status of machines in the given parameter group (such as encoder temperature).</p>
+<ul>
+<li>
+<p><strong>Input Parameter</strong></p>
+<ul>
+<li><strong>parameterGroupId</strong> - This is the id column from the table ParameterGroup to identify the parameter group this parameter belongs to (For example id 4 for group encoder temperature).</li>
+</ul>
+</li>
+<li>
+<p><strong>Response Body</strong> - The response body will consist of dictionary of two important key values, the first one denotes the status of machines (that are in abnormal condition) and second one is the summary of status of all other parameter groups (17 groups)</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"param"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"param_actual_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ENCODER_TEMPERATURE"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"machines"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"T_B_OP160"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"axes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"actual_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PulseCoderTemp_1_path1_T_B_OP160"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"last_update_time"</span><span class="p">:</span><span class="w"> </span><span class="mi">1662514103</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">55</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="p">]</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"T_B_OP195A"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"axes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"actual_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PulseCoderTemp_1_path1_T_B_OP195A"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"last_update_time"</span><span class="p">:</span><span class="w"> </span><span class="mi">1662514230</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">53</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="p">]</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"params_group_status"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="mi">1</span><span class="w"></span>
+<span class="w">        </span><span class="p">]</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Explanation for the response body is given below</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"param"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is the id of the parameter group in the parameter group table"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"param_actual_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Actual name of the parameter group"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"machines"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Name of the machine"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Status of the machines, 1 - ok, 2-warning, 3-critical"</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"axes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Axis Id"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"actual_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Actual name of the parameter as mentioned in the mongodb"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"last_update_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The recent most time when the parameter was updates"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Value of the parameter"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"status of the axis/parameter"</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="p">]</span><span class="w"></span>
+<span class="w">            </span><span class="p">}],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"params_group_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"List of length 17 with values either 1, 2 or 3 denoting the</span>
+<span class="s2">                        summary of status of all machines in that paramter group"</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</li>
+<li>
+<p><strong>/api/v1/{machineName}/{parameterGroupId}/{axisId}</strong> - This end point is used to get the real time data for a given machine, parameter group and axis.the given parameter group (such as encoder temperature).</p>
+<ul>
+<li>
+<p><strong>Input Parameter</strong></p>
+<ul>
+<li>
+<p><strong>machineName</strong> - This is the name of the machine as recorded in the machines table.</p>
+</li>
+<li>
+<p><strong>parameterGroupId</strong> - This is the id column from the table ParameterGroup to identify the parameter group this parameter belongs to (For example id 4 for group encoder temperature).</p>
+</li>
+<li>
+<p><strong>axisId</strong> - This is the id as given in the machines axis translation file.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Response Body</strong> - The response body will consist of dictionary of two important key values, the first one denotes the real time data and second one denotes the timestamp of those data.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"param"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"axis"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"machine"</span><span class="p">:</span><span class="w"> </span><span class="s2">"T_B_OP160"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"start_time"</span><span class="p">:</span><span class="w"> </span><span class="mi">1662512183000</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"stop_time"</span><span class="p">:</span><span class="w"> </span><span class="mi">1662512303000</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="mi">36</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="mi">37</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="mi">36</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"timestamps"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="mi">1662512183000</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="mi">1662512243000</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="mi">1662512303000</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"critical_limit"</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"warning_limit"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Explanation for the response body is given below</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"param"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is the id of the parameter group in the parameter group table"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"axis"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Axis Id"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"machine"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Machine name"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"start_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The start time of the returned data in epoch format"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"stop_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The end time of the returned data in epoch format"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"List of real time data values"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"timestamps"</span><span class="p">:</span><span class="w"> </span><span class="s2">"List of timestamps in epoch format for the above data points"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"critical_limit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The critical limit value for this parameter"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"warning_limit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is the warning limit value for this parameter"</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</li>
+<li>
+<p><strong>/api/v1/{machineName}/alarms</strong> - This end point is used to get the summary of alarms for a given machine between given start and end time.</p>
+<ul>
+<li>
+<p><strong>Input Parameter</strong></p>
+<ul>
+<li>
+<p><strong>machineName</strong> - This is the name of the machine as recorded in the machines table for which alarm summary is requried.</p>
+</li>
+<li>
+<p><strong>startTime</strong> - This is the start time in epoch format for which a summary of the alarms is requried.</p>
+</li>
+<li>
+<p><strong>endTime</strong> - This is the end time in epoch format for which a summary of the alarms is requried.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Response Body</strong> - The response body will consist of dictionary of three important key values, the first one denotes alarm count data and second one denotes the total timespan of alarms, third one denotes the timeline data for the alarms between the given start and end time.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"count_data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EMBEDDED ETHERNET ERROR DETECTION"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">122</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PMC ALARM"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="p">],</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"timespan_data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EMBEDDED ETHERNET ERROR DETECTION"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"total_time"</span><span class="p">:</span><span class="w"> </span><span class="mf">353688.5</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PMC ALARM"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"total_time"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="p">],</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"timeline_data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"enddate_epoch_time"</span><span class="p">:</span><span class="w"> </span><span class="mi">1655101839</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"update_epoch_time"</span><span class="p">:</span><span class="w"> </span><span class="mf">1655093313.5</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EMBEDDED ETHERNET ERROR DETECTION"</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"enddate_epoch_time"</span><span class="p">:</span><span class="w"> </span><span class="mf">1653279888.5</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"update_epoch_time"</span><span class="p">:</span><span class="w"> </span><span class="mf">1653279883.5</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PMC ALARM"</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="p">]</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Explanation for the response body is given below</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"count_data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The alarm message"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The total number of times this alarm occured during the given time"</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="p">],</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"timespan_data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The alarm message"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"total_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The total number of seconds this alarm occured during the given time"</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="p">],</span><span class="w"></span>
+<span class="w">            </span><span class="nt">"timeline_data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"enddate_epoch_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The enddate time of this alarm as mentioned in the mtlinki mongodb"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"update_epoch_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The updatedate time of this alarm as mentioned in the mtlinki mongodb"</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The alarm message"</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="p">]</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</li>
+</ol>
+<h4 id="post-end-points">Post End Points</h4>
+<p>These are end points used to create new data.</p>
+<ol>
+<li>
+<p><strong>/api/v1/{machineName}/{sparePart}</strong> - This end point is used to create new spare part for a machine.</p>
+<ul>
+<li>
+<p><strong>Input Parameter</strong></p>
+<ul>
+<li>
+<p><strong>machineName</strong> - This is the name of the machine as recorded in the machines table for which new spare part needs to be created.</p>
+</li>
+<li>
+<p><strong>sparePart</strong> - This is the name of the spare part that needs to be created for this machine.</p>
+</li>
+<li>
+<p><strong>referencePartNumber</strong> - This is the reference part number (which is equivalent to the part number for the machine when the new part is created or the part count when reset button is pressed). This is used to get the relative part count for the specific spare part. For example if new spare part called "spare part 1" is created when the total part count of the machine is 1000, the reference part number would be 1000, if the total part count for the machine is increased to 1001, then the part count for this spare part would  be 1 (calculatd by subtracting the reference part count for the spare part from the total part count of the machine, 10001 - 1000 = 1 in this case)</p>
+</li>
+<li>
+<p><strong>warningLimit</strong> - This is the warning limit for this spare part.</p>
+</li>
+<li>
+<p><strong>criticalLimit</strong> - This is the critical limit for this spare part.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Response Body</strong> - If the creation of new spare part was succesful it returns the (same) input parameters that were given by the client.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"part_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Spart Part 1"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"reference_part_number"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"warning_limit"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"critical_limit"</span><span class="p">:</span><span class="w"> </span><span class="mi">1500</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"machine_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Explanation for the response body is given below</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is the row id in the spare parts table in the postgresql"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"part_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The spare part name"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"reference_part_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is the referecen part number"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"warning_limit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Warning limit for this spare part"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"critical_limit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Critical limit for this spare part"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"machine_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is the row id corresponding to the machine in the machines table in postgresql"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is the current part count for the spare part, initially it would be zero"</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</li>
+</ol>
+<h4 id="put-end-points">Put End Points</h4>
+<p>These are end points used to update existing data.</p>
+<ol>
+<li>
+<p><strong>/api/v1/{machineName}/{sparePart}</strong> - This end point is used to update an existing spare part for a machine.</p>
+<ul>
+<li>
+<p><strong>Input Parameter</strong></p>
+<ul>
+<li>
+<p><strong>machineName</strong> - This is the name of the machine as recorded in the machines table for which new spare part needs to be created.</p>
+</li>
+<li>
+<p><strong>sparePart</strong> - This is the name of the spare part that needs to be created for this machine.</p>
+</li>
+<li>
+<p><strong>parameterName</strong> - This is shows which parameter we want to update for the spare part, it could either be reference part number, warning limit or critical limit.</p>
+</li>
+<li>
+<p><strong>parameterValue</strong> - This is the parameter value.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Response Body</strong> - If the spare part was succesful updated it returns the parameters that were given by the client during the creation of the spare part.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"part_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Spart Part 1"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"reference_part_number"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"warning_limit"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"critical_limit"</span><span class="p">:</span><span class="w"> </span><span class="mi">1500</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"machine_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Explanation for the response body is given below</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is the row id in the spare parts table in the postgresql"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"part_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The spare part name"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"reference_part_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is the referecen part number"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"warning_limit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Warning limit for this spare part"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"critical_limit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Critical limit for this spare part"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"machine_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is the row id corresponding to the machine in the machines table in postgresql"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is the current part count for the spare part, initially it would be zero"</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</li>
+<li>
+<p><strong>/api/v1/parameters_limit/{machineName}/{parameterGroupId}}/{axisId}</strong> - This end point is used to update the warning /critical limits for the static parameter or to set new or update(append) reference signal for dynamic parameter.</p>
+<ul>
+<li>
+<p><strong>Input Parameter</strong></p>
+<ul>
+<li>
+<p><strong>machineName</strong> - This is the name of the machine as recorded in the machines table whose parameter limits is to be set/updated.</p>
+</li>
+<li>
+<p><strong>parameterGroupId</strong> - This is the id column from the table ParameterGroup to identify the parameter group this parameter belongs to (For example id 4 for group encoder temperature).</p>
+</li>
+<li>
+<p><strong>axisId</strong> - This is the id as given in the machines axis translation file.</p>
+</li>
+<li>
+<p><strong>setType</strong> - This is shows what parameter that the client is trying to set, it could be warning_limit, critical_limit, reference_signal.</p>
+</li>
+<li>
+<p><strong>limit</strong> - This is the limit value.</p>
+</li>
+<li>
+<p><strong>append</strong> - This tells if the client is trying to append new reference signal to existing reference signal (value should be true), or replace the existing reference signal with new signal (in this case the append parameter should be false). This is applicable only if the setType is reference_signal.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Request Body</strong> - This is a list of reference signal values, for example : [1, 2, 5, 8]</p>
+</li>
+<li>
+<p><strong>Response Body</strong> - If the limits are sucessfully updated, it return the set type and value.
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"set_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"warning_limit"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">55</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w">       </span>
+</code></pre></div></p>
+</li>
+</ul>
+<p>Explanation for the response body is given below</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"set_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The parameter set type"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The set value for the parameter"</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w">       </span>
+</code></pre></div>
+</li>
+</ol>
+<h4 id="delete-end-points">Delete End Points</h4>
+<p>These are end points used to delete data.</p>
+<ol>
+<li>
+<p><strong>/api/v1/{machineName}/{sparePart}</strong> - This end point is used to delete an existing spare part for a machine.</p>
+<ul>
+<li>
+<p><strong>Input Parameter</strong></p>
+<ul>
+<li>
+<p><strong>machineName</strong> - This is the name of the machine as recorded in the machines table for which a spare part needs to be deleted.</p>
+</li>
+<li>
+<p><strong>sparePart</strong> - This is the name of the spare part that needs to be deleted for this machine.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Response Body</strong> - If returns a message regarding the success or failure of the operation.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"detail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Successfully Deleted"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"spare_part"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Spart Part 1"</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Explanation for the response body is given below</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"detail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Information whether the deletion was successful or not"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"spare_part"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Spart Part name"</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</li>
+</ol>
+<h3 id="security-route">Security Route</h3>
+<p>These set of end points consist of all the routes requrired for security related operations.</p>
+<h4 id="post-end-points_1">Post End Points</h4>
+<p>These are end points used to post data.</p>
+<ol>
+<li>
+<p><strong>/api/v1/auth</strong> - This end point is used to login a user and give JWT token for the session.</p>
+<ul>
+<li><strong>Request Body</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The user name"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The user's password"</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<ul>
+<li><strong>Response Body</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGiIsInR5cCI6IkpXVCJ9.ey6gH9RWI5D5PFjI"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"token_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bearer"</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Explanation for the response body is given below</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The JWT token"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"token_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"token type"</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</li>
+<li>
+<p><strong>/api/v1/register</strong> - This end point is used to register a new user, this can be done only be admin users.</p>
+<ul>
+<li><strong>Request Body</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"new_user"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"new_user@mail.com"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"full_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User Name"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w">   </span>
+</code></pre></div>
+<ul>
+<li><strong>Response Body</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user name"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"email id of user"</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">"full_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Full name of user"</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</li>
+</ol>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Collector Services" class="md-footer__link md-footer__link--prev" href="../Collector/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              Collector Services
+            </div>
+</div>
+</a>
+<a aria-label="Next: Opc Ua" class="md-footer__link md-footer__link--next" href="../../General%20Knowledge/OPC%20UA/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              Opc Ua
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      For the Love of Manufacturing ❤️
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.078830c0.min.js"></script>
+<script src="../../javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+</html>

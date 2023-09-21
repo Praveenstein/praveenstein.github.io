@@ -1,0 +1,733 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.4.0, mkdocs-material-8.5.6" name="generator"/>
+<title>KPIs Calculations (CMTI) - SMDDC 2.0 IIOT Project Documentation</title>
+<link href="../../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
+<meta content="#009485" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gdesc-inner { font-size: 0.75rem; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="teal" data-md-color-primary="teal" data-md-color-scheme="" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#oee-metrics">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="SMDDC 2.0 IIOT Project Documentation" class="md-header__button md-logo" data-md-component="logo" href="../.." title="SMDDC 2.0 IIOT Project Documentation">
+<img alt="logo" src="../../images/cmti_logo_full_white_no_border.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            SMDDC 2.0 IIOT Project Documentation
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              KPIs Calculations (CMTI)
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="SMDDC 2.0 IIOT Project Documentation" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="SMDDC 2.0 IIOT Project Documentation">
+<img alt="logo" src="../../images/cmti_logo_full_white_no_border.png"/>
+</a>
+    SMDDC 2.0 IIOT Project Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Project Overview
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../user_interfaces/">
+        User Interface
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Technical%20Stack/">
+        Technical Stack
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Code%20%26%20Services%20Locations/">
+        Codes &amp; Services Location
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+          Code Explanation
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Code Explanation" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Code Explanation
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Code%20Explanation/Collector/">
+        Collector Services
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Code%20Explanation/Back%20End/">
+        Back End Services
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+          General Knowledge
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="General Knowledge" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          General Knowledge
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../General%20Knowledge/OPC%20UA/">
+        Opc Ua
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../General%20Knowledge/KPI%20in%20Manufacturing/">
+        KPIs in Manufacturing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../General%20Knowledge/Focas/">
+        Focas
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+          Project Knowledge
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Project Knowledge" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          Project Knowledge
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Machines/">
+        Machines
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../KPI%20Calculations/">
+        KPIs Calculations
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          KPIs Calculations (CMTI)
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        KPIs Calculations (CMTI)
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#availability">
+    Availability
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#performance">
+    Performance
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quality">
+    Quality
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overall-equipment-effectiveness-oee">
+    Overall Equipment Effectiveness (OEE)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#six-big-losses">
+    Six Big Losses
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Troubleshoot_Faq/">
+        Troubleshooting &amp; FAQ
+      </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#availability">
+    Availability
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#performance">
+    Performance
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quality">
+    Quality
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overall-equipment-effectiveness-oee">
+    Overall Equipment Effectiveness (OEE)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#six-big-losses">
+    Six Big Losses
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="oee-metrics">OEE Metrics</h1>
+<p>Since there is not much production going in CMTI, and due to lack of systematic method for manufacturing, we're are using a different approach to calculate the KPIs, which will not reflect the actual performance of the plant and machine, but for the sake of demonstration we have to do this.</p>
+<p>Let's explain the calculation with a sample data shown below:</p>
+<p>Machine Production Timeline:</p>
+<table>
+<thead>
+<tr>
+<th>S.No</th>
+<th>Machine Name</th>
+<th>Start Time</th>
+<th>End Time</th>
+<th>Duration*</th>
+<th>Ideal Time</th>
+<th>Product Name</th>
+<th>Program Name</th>
+<th>Part Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>MCV - 450</td>
+<td>31-05-2023T11:15:03</td>
+<td>31-05-2023T11:17:09</td>
+<td>126</td>
+<td>120</td>
+<td>CNC_DRILL_1</td>
+<td>crank_feature_1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>MCV - 450</td>
+<td>31-05-2023T11:17:45</td>
+<td>31-05-2023T11:19:22</td>
+<td>127</td>
+<td>120</td>
+<td>CNC_DRILL_1</td>
+<td>crank_feature_1</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>* Sometime the duration column in the above table will not be exactly equal to the difference between end and start time columns, reason is, the machine could have been stopped in the middle of production for minor adjustments, which could be seen in the machine status timeline table.</p>
+<p>Part Status Desctiption Table:</p>
+<table>
+<thead>
+<tr>
+<th>Id (PK)</th>
+<th>Part Status</th>
+<th>Description</th>
+<th>Category</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>Good</td>
+<td>This denotes the part is of good quality and was manufactured according the given tolerances</td>
+<td>good</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>rework_start_up</td>
+<td>This denotes the part is was of bad quality but it could be made good by rework, it was part of the start up phase of the production, where fault will be usually high</td>
+<td>loss_start_up</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>scrap_start_up</td>
+<td>This denotes the part is was of bad quality and cannot be reworked, it was part of the start up phase of the production, where fault will be usually high</td>
+<td>loss_start_up</td>
+</tr>
+<tr>
+<td>4.</td>
+<td>rework_production</td>
+<td>This denotes the part is was of bad quality but it could be made good by rework, it was part of the production phase of the production, where fault will be usually low</td>
+<td>loss_production</td>
+</tr>
+<tr>
+<td>5.</td>
+<td>scrap_production</td>
+<td>This denotes the part is was of bad quality and cannot be reworked, it was part of the production phase of the production, where fault will be usually low</td>
+<td>loss_production</td>
+</tr>
+</tbody>
+</table>
+<p>Machine Status Timeline:</p>
+<table>
+<thead>
+<tr>
+<th>S.No</th>
+<th>Machine Name</th>
+<th>Start Time</th>
+<th>End Time</th>
+<th>Duration</th>
+<th>Machine State</th>
+<th>Label</th>
+<th>Label Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>MCV - 450</td>
+<td>31-05-2023T11:15:03</td>
+<td>31-05-2023T11:17:09</td>
+<td>126</td>
+<td>production</td>
+<td>program name</td>
+<td>crank_feature_1</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>MCV - 450</td>
+<td>31-05-2023T11:17:09</td>
+<td>31-05-2023T11:17:45</td>
+<td>36</td>
+<td>idle</td>
+<td>reason</td>
+<td>setup_and_adjustments</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>MCV - 450</td>
+<td>31-05-2023T11:17:45</td>
+<td>31-05-2023T11:19:22</td>
+<td>127</td>
+<td>production</td>
+<td>program name</td>
+<td>crank_feature_1</td>
+</tr>
+</tbody>
+</table>
+<p>Planned Event Timeline:</p>
+<table>
+<thead>
+<tr>
+<th>S.No</th>
+<th>Date</th>
+<th>Shift</th>
+<th>Start Time</th>
+<th>End Time</th>
+<th>Duration (s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>31/05/2023</td>
+<td>1</td>
+<td>31-05-2023T8:00:00</td>
+<td>31-05-2023T4:00:00</td>
+<td>28800</td>
+</tr>
+</tbody>
+</table>
+<h2 id="availability">Availability</h2>
+<p>The formula for availability is given by:</p>
+<div class="arithmatex">\[
+\text{Availability} = \frac{\text{Actual Production Time}}{\text{Planned Production Time}}
+\]</div>
+<p>Let's say we want to find the availability between </p>
+<p>Start time : 31-05-2023T11:15:03 </p>
+<p>End time: 31-05-2023T11:19:22</p>
+<ol>
+<li>
+<p>Find the planned production time for the given duration:</p>
+<ol>
+<li>We can see that from the planned event timeline, the query start and end datetime falls under prodution (full time), hence the planned production time for the given query time duration is the query time duration itself (which is 31-05-2023T11:19:22 - 31-05-2023T11:15:03 = 289 s).</li>
+</ol>
+<div class="arithmatex">\[
+\text{Planned Production Time} = \text{289}
+\]</div>
+</li>
+<li>
+<p>Find the Actual Production Time:</p>
+<ol>
+<li>The actual production time is given by summation of duration column in the Machine Production Timeline table for all rows where the start and end time is within the query range.</li>
+<li>For example in the current case: 126 + 127 = 253 seconds.</li>
+</ol>
+<div class="arithmatex">\[
+\text{Actual Production Time} = \text{253}
+\]</div>
+</li>
+<li>
+<p>Find Availability:</p>
+<ol>
+<li>By substituting in the previous formula we can find the value</li>
+</ol>
+<div class="arithmatex">\[
+\text{Availability} = \frac{\text{253}}{\text{289}}
+\]</div>
+<div class="arithmatex">\[
+\text{Availability} = {\text{0.8754}}
+\]</div>
+<div class="arithmatex">\[
+\text{Availability \%} = {\text{87.54 \%}}
+\]</div>
+</li>
+</ol>
+<h2 id="performance">Performance</h2>
+<p>The formula for Performance is given by:</p>
+<div class="arithmatex">\[
+\text{Performance} = \frac{\text{Ideal Production Time}}{\text{Actual Production Time}}
+\]</div>
+<ol>
+<li>
+<p>Find Ideal Production Time:</p>
+<ol>
+<li>
+<p>The ideal production time is determined by summing up the ideal cycle times for all the cycles that occurred between the given start and end time. For the solution deployed at cmti, this is available in the machine production timeline table, with the column name of <code>Ideal Time</code> . The collector which collects the data from the machine, will give a dummy data for this by taking a value that is between 90 % and 98 % of the actual duration time. This is something that we have to do, since there is no systematic way to get the ideal time in the current set up at cmti, and since we have to demonstrate a prototype we use some same value.</p>
+<div class="arithmatex">\[
+\text{Ideal Production Time} = \sum \text{Ideal Cycle Times for All Cycles during the given Query Range}
+\]</div>
+</li>
+<li>
+<p>For example in the previous case, the following would be applicable</p>
+<p>120 + 120 = 240</p>
+<div class="arithmatex">\[
+\text{Ideal Production Time } = {\text{240}}
+\]</div>
+</li>
+</ol>
+</li>
+<li>
+<p>The actual production time is already found in previous metric(Availability):</p>
+</li>
+<li>
+<p>Find Performance</p>
+<div class="arithmatex">\[
+\text{Performance} = \frac{\text{Ideal Production Time}}{\text{Actual Production Time}}
+\]</div>
+<div class="arithmatex">\[
+\text{Performance} = \frac{\text{240}}{\text{253}}
+\]</div>
+<div class="arithmatex">\[
+\text{Performance} = {\text{0.9486}}
+\]</div>
+<div class="arithmatex">\[
+\text{Performance \%} = {\text{94.86 \%}}
+\]</div>
+</li>
+</ol>
+<h2 id="quality">Quality</h2>
+<p>The formula for Quality is given by </p>
+<div class="arithmatex">\[
+\text{Quality} = \frac{\text{Good Parts Produced}}{\text{Total Parts Produced}}
+\]</div>
+<ol>
+<li>
+<p>Total Parts:
+    This can be calculated by querying the table of machine production timeline, the total count equal to the number of rows with column 'Machine State' equal to production and </p>
+</li>
+<li>
+<p>The number of good parts is equal to the number of rows where the rejected is not equal to 'No'.</p>
+</li>
+<li>
+<p>For example in the above case </p>
+<div class="arithmatex">\[
+\text{Quality} = \frac{\text{2}}{\text{2}}
+\]</div>
+<div class="arithmatex">\[
+\text{Quality } = {\text{1}}
+\]</div>
+<div class="arithmatex">\[
+\text{Quality \%} = {\text{100 \%}}
+\]</div>
+</li>
+</ol>
+<h2 id="overall-equipment-effectiveness-oee">Overall Equipment Effectiveness (OEE)</h2>
+<p>The formula for OEE is given by </p>
+<div class="arithmatex">\[
+\text{OEE} = {\text{Availability}}\times{\text{Performance}}\times{\text{Quality}}
+\]</div>
+<div class="arithmatex">\[
+\text{OEE} = {\text{0.8754}}\times{\text{0.9486}}\times{\text{1}}
+\]</div>
+<div class="arithmatex">\[
+\text{OEE} = {\text{0.8304}}
+\]</div>
+<div class="arithmatex">\[
+\text{OEE \%} = {\text{83.04 \%}}
+\]</div>
+<h2 id="six-big-losses">Six Big Losses</h2>
+<p>The Six Big Losses are a key concept in Total Productive Maintenance (TPM) and Overall Equipment Effectiveness (OEE). They represent the most common causes of efficiency loss in manufacturing. Here they are:</p>
+<ol>
+<li>
+<p><strong>Downtime Loss (Mapped to Availability in OEE)</strong> </p>
+<ul>
+<li>
+<p><strong>Breakdowns:</strong> These are instances of equipment failure that result in unscheduled downtime. They can be caused by tooling failures, unplanned maintenance, equipment breakdown, etc.</p>
+</li>
+<li>
+<p><strong>Setup and Adjustments:</strong> This refers to the time taken to change over from one product variant to another. It includes setup and adjustment time during which the equipment is not operational.</p>
+</li>
+<li>
+<p><strong>Idling and Small Stops:</strong> These refer to minor stops or pauses in the production process that last for less than 5 minutes and do not require maintenance personnel. They can occur due to issues like a blocked sensor, a minor jam, or idle time during part changeover.</p>
+</li>
+<li>
+<p>It is the collector's responsibility to accurately identify the reason for the machine's idle state. One simple method is to categorize durations less than 5 minutes as "Idling and Small Stops," durations between 5 minutes and 2 hours as "Setup and Adjustments," and durations exceeding 2 hours as "Breakdowns."</p>
+</li>
+<li>
+<p><strong>Calculation:</strong> To calculate the losses associated with these conditions within a specific time range, we need to query the <code>Machine Status Timeline</code> table for that range, focusing on entries where the <code>Machine State</code> column indicates an idle or off condition. For cumulative downtime, we sum the duration values across all corresponding rows related to the above conditions. To obtain individual values, we further filter the rows based on the label column, using the following criteria:</p>
+<ul>
+<li>
+<p><strong>Breakdowns:</strong> Select entries where the machine state is idle or off, and the label value is <code>breakdown</code>.</p>
+</li>
+<li>
+<p><strong>Setup and Adjustments:</strong> Select entries where the machine state is idle or off, and the label value is <code>setup and adjustments</code>.</p>
+</li>
+<li>
+<p><strong>Idling and Small Stops:</strong> Select entries where the machine state is idle or off, and the label value is <code>idling and small stops</code>.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Speed Loss (Mapped to Performance in OEE)</strong></p>
+<ul>
+<li>
+<p><strong>Reduced Speed:</strong> This refers to instances where the machinery is operating, but not at its optimal speed. This could be due to wear and tear, equipment issues, or sub-optimal operating conditions.</p>
+</li>
+<li>
+<p><strong>Calculation:</strong> The formula for reeduced speed loss is given by the following formula, and it is almost similar to calculation of performance</p>
+<div class="arithmatex">\[
+\text{Reduced Speed Loss} = \frac{\text{Actual Production Time - Ideal Production Time}}{\text{Actual Production Time}}
+\]</div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Defect Loss (Mapped to Quality in OEE)</strong></p>
+<ul>
+<li>
+<p><strong>Startup Rejects:</strong> These are defects that occur during the startup phase of production. When equipment is first started, it may take a while for it to operate correctly, resulting in defective output.</p>
+</li>
+<li>
+<p><strong>Calculation:</strong> To determine the start-up reject loss within a given time range, you can refer to the <code>Machine Production Timeline</code> table. By filtering out the rows with a <code>Part Status</code> column value of either 2 or 3, corresponding to <code>rework_start_up</code> or <code>scrap_start_up</code> in the Part Status Description Table, you can identify the start-up reject instances. Let's assume there are 3 such rows. To calculate the start-up reject loss, you need to consider the total number of parts produced during that time range, which includes both good and bad parts. This can be determined by counting the total number of rows in the table within the specified time range, let's say it's 10. The start-up reject loss can then be calculated as follows:</p>
+<div class="arithmatex">\[
+\text{Startup Rejects Loss} = \frac{\text{Bad Parts Produced During Start Up}}{\text{Total Parts Produced}}
+\]</div>
+<div class="arithmatex">\[
+\text{Startup Rejects Loss} = \frac{\text{3}}{\text{10}}
+\]</div>
+<div class="arithmatex">\[
+\text{Startup Rejects Loss \%} = \text{30 \%}
+\]</div>
+</li>
+<li>
+<p><strong>Production Rejects:</strong> These are defects that occur during steady-state production. Despite the equipment running as expected, there can still be quality losses due to factors like tool wear or process variation.</p>
+</li>
+<li>
+<p><strong>Calculation:</strong> To determine the start-up reject loss within a given time range, you can refer to the <code>Machine Production Timeline</code> table. By filtering out the rows with a <code>Part Status</code> column value of either 4 or 5, corresponding to <code>rework_production</code> or <code>scrap_production</code> in the Part Status Description Table, you can identify the production reject instances. Let's assume there are 2 such rows. To calculate the production reject loss, you need to consider the total number of parts produced during that time range, which includes both good and bad parts. This can be determined by counting the total number of rows in the table within the specified time range, let's say it's 10. The production reject loss can then be calculated as follows:</p>
+<div class="arithmatex">\[
+\text{Production Rejects Loss} = \frac{\text{Bad Parts Produced During Production}}{\text{Total Parts Produced}}
+\]</div>
+<div class="arithmatex">\[
+\text{Production Rejects Loss} = \frac{\text{2}}{\text{10}}
+\]</div>
+<div class="arithmatex">\[
+\text{Production Rejects Loss \%} = \text{20 \%}
+\]</div>
+</li>
+<li>
+<p>To classify the losses into rework and scrap categories, we can apply additional filtering based on the Part Status column value. Specifically, we can include values 2, 3, 4, or 5, which correspond to different types of losses: rework loss during start-up, scrap loss during start-up, rework loss during production, and scrap loss during production, respectively. By filtering the Part Status column to only include these values, we can further categorize the losses accordingly.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>By identifying and targeting these Six Big Losses, manufacturers can significantly improve their OEE and overall productivity.</p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: KPIs Calculations" class="md-footer__link md-footer__link--prev" href="../KPI%20Calculations/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              KPIs Calculations
+            </div>
+</div>
+</a>
+<a aria-label="Next: Troubleshooting &amp; FAQ" class="md-footer__link md-footer__link--next" href="../../Troubleshoot_Faq/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              Troubleshooting &amp; FAQ
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      For the Love of Manufacturing ❤️
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.078830c0.min.js"></script>
+<script src="../../javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+</html>

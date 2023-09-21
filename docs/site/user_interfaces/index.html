@@ -1,0 +1,810 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.4.0, mkdocs-material-8.5.6" name="generator"/>
+<title>User Interface - SMDDC 2.0 IIOT Project Documentation</title>
+<link href="../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
+<meta content="#009485" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gdesc-inner { font-size: 0.75rem; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                </style><script src="../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="teal" data-md-color-primary="teal" data-md-color-scheme="" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#user-interface">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="SMDDC 2.0 IIOT Project Documentation" class="md-header__button md-logo" data-md-component="logo" href=".." title="SMDDC 2.0 IIOT Project Documentation">
+<img alt="logo" src="../images/cmti_logo_full_white_no_border.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            SMDDC 2.0 IIOT Project Documentation
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              User Interface
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="SMDDC 2.0 IIOT Project Documentation" class="md-nav__button md-logo" data-md-component="logo" href=".." title="SMDDC 2.0 IIOT Project Documentation">
+<img alt="logo" src="../images/cmti_logo_full_white_no_border.png"/>
+</a>
+    SMDDC 2.0 IIOT Project Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+        Project Overview
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          User Interface
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        User Interface
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#maintenance-section">
+    Maintenance Section
+  </a>
+<nav aria-label="Maintenance Section" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#machine-state-page">
+    Machine State Page
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#real-time-graph">
+    Real Time Graph
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alarm-monitoring-section">
+    Alarm Monitoring Section
+  </a>
+<nav aria-label="Alarm Monitoring Section" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alarm-table">
+    Alarm Table
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#partio-graphs">
+    Partio Graphs
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pi-chart">
+    Pi Chart
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#spare-part-management">
+    Spare Part Management
+  </a>
+<nav aria-label="Spare Part Management" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#all-machine-status">
+    All Machine Status
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#machine-specific-spare-part-details">
+    Machine Specific Spare Part Details
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#spm-machines">
+    SPM Machines
+  </a>
+<nav aria-label="SPM Machines" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#all-spm-machine-details">
+    All SPM Machine Details
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#machine-specific-details">
+    Machine Specific Details
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-management">
+    User Management
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Technical%20Stack/">
+        Technical Stack
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Code%20%26%20Services%20Locations/">
+        Codes &amp; Services Location
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+          Code Explanation
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Code Explanation" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Code Explanation
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Code%20Explanation/Collector/">
+        Collector Services
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Code%20Explanation/Back%20End/">
+        Back End Services
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+          General Knowledge
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="General Knowledge" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          General Knowledge
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../General%20Knowledge/OPC%20UA/">
+        Opc Ua
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../General%20Knowledge/KPI%20in%20Manufacturing/">
+        KPIs in Manufacturing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../General%20Knowledge/Focas/">
+        Focas
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+          Project Knowledge
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Project Knowledge" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          Project Knowledge
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Project%20Knowledge/Machines/">
+        Machines
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Project%20Knowledge/KPI%20Calculations/">
+        KPIs Calculations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Project%20Knowledge/KPI%20Calculations%20%28CMTI%29/">
+        KPIs Calculations (CMTI)
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Troubleshoot_Faq/">
+        Troubleshooting &amp; FAQ
+      </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#maintenance-section">
+    Maintenance Section
+  </a>
+<nav aria-label="Maintenance Section" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#machine-state-page">
+    Machine State Page
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#real-time-graph">
+    Real Time Graph
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alarm-monitoring-section">
+    Alarm Monitoring Section
+  </a>
+<nav aria-label="Alarm Monitoring Section" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alarm-table">
+    Alarm Table
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#partio-graphs">
+    Partio Graphs
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pi-chart">
+    Pi Chart
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#spare-part-management">
+    Spare Part Management
+  </a>
+<nav aria-label="Spare Part Management" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#all-machine-status">
+    All Machine Status
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#machine-specific-spare-part-details">
+    Machine Specific Spare Part Details
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#spm-machines">
+    SPM Machines
+  </a>
+<nav aria-label="SPM Machines" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#all-spm-machine-details">
+    All SPM Machine Details
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#machine-specific-details">
+    Machine Specific Details
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-management">
+    User Management
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="user-interface">User Interface</h1>
+<p>This section gives the details about the user interface for the implemented solution. It gives details about all the functionalites of available features and steps to carry out certain task.</p>
+<h2 id="maintenance-section">Maintenance Section</h2>
+<p>There are two sections within the maintenacnce section,</p>
+<ul>
+<li>
+<p>A section to show the states of all parameter group, production line, machine, and it's parameters</p>
+</li>
+<li>
+<p>A section that shows the realtime data (time vs axis/parameter). This can be accessed by clicking on the axis (tiny rectangular box withing the machine infomation card)</p>
+</li>
+</ul>
+<h3 id="machine-state-page">Machine State Page</h3>
+<p>The screens that shows that states of differenet element are shown below.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/tiei_1_edit_2.png"><img align="center" alt="Maintenance Section: Machine State Page" src="../images/tiei_1_edit_2.png"/></a></p>
+<p>This section shows the machine state of the 59 general purpose cnc machines. The main element in the screeen is your information card for the machines (rectangular box). It has two set of attributes</p>
+<ul>
+<li>
+<p><strong>Machine Name</strong> - This represents the full name of the machine, such as OP180A (without the production line name).</p>
+</li>
+<li>
+<p><strong>Parameter/Axis Name</strong> - The different axis are represented by the smaller rectangular box within the information card right below the machine name, they typically consist of 1, 2 or 3 letter symbols.</p>
+</li>
+</ul>
+<p>Each of the machines are grouped based on the production line such as head, crank and block.</p>
+<p>This screen shows four type of states:</p>
+<ul>
+<li>
+<p><strong>Machine Level State</strong> - Each of the machine (as represented by the rectangular information box) will change its color based upon the current state of all the parameters/axis it has.</p>
+</li>
+<li>
+<p><strong>Axis Level State</strong> - Each of the machine axis (as represented by the smaller rectangular information box) will change its color based upon it's current state.</p>
+</li>
+<li>
+<p><strong>Line Level State</strong> - Each of the production line (as represented by the bigger and transparent rectangular information box) will change its color based upon the current state of all the machines in it's production line.</p>
+</li>
+<li>
+<p><strong>Parameter Group Level State</strong> - Each of the parameter group (as represented by the rectangular information box at the bottom of the page) will change its color based upon the state of the machines in a particular group such as encoder temperature.</p>
+</li>
+</ul>
+<p>for all the above state, red represents a critical state, yellow represents a warning state and green repersents an normal state.</p>
+<p>The different sub sections of this maintenace section is explained below (as numbered in the image above)</p>
+<ol>
+<li>
+<p><strong>Parameter Name</strong> : This shows the parameter group name, such as encoder temperature, apc battery, etc</p>
+</li>
+<li>
+<p><strong>Machine State Summary</strong> : This shows the summary of the states of all machines, it gives the total number of machines in the three different states.</p>
+</li>
+<li>
+<p><strong>Logged In User Details</strong> : This shows the current user logged in. You can use that to log out from the current session.</p>
+</li>
+<li>
+<p><strong>Current Section Selected</strong> : This shows the current section (of the web application) that is selected.</p>
+</li>
+<li>
+<p><strong>Parameter/Axis State</strong> : This shows the current state of the parameter/axis (Critical).</p>
+</li>
+<li>
+<p><strong>Machine State Information Card</strong> : This shows the current status of the machine.</p>
+</li>
+<li>
+<p><strong>Parameter/Axis State</strong> : This shows the current state of the parameter/axis (Warning) that belongs to the machine.</p>
+</li>
+<li>
+<p><strong>Line State Information Card</strong> : This shows the name of the production line.</p>
+</li>
+<li>
+<p><strong>Line State Information Card</strong> : This shows the current state of the production line.</p>
+</li>
+<li>
+<p><strong>Parameter Group State Summary</strong> : This shows the current state of the different parameter groups that belongs to the machine.</p>
+</li>
+</ol>
+<h3 id="real-time-graph">Real Time Graph</h3>
+<p>The screens that shows the real time data (for static parameter) is shown below</p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/tiei_2_edited.png"><img align="center" alt="Maintenance Section: Real Time Data - Static Parameter" src="../images/tiei_2_edited.png"/></a></p>
+<p>The different sub sections of this maintenace section is explained below (as numbered in the image above)</p>
+<ol>
+<li>
+<p><strong>Parameter Name</strong> : This shows the parameter group name, prorduction line, machine name and axis/parameter name.</p>
+</li>
+<li>
+<p><strong>Warning Limit</strong> : This shows the current warning limit of this parameter.</p>
+</li>
+<li>
+<p><strong>Warning Limit Set Button</strong> : This is the button used to set/change the warning limit for the current parameter.</p>
+</li>
+<li>
+<p><strong>Critical Limit</strong> : This shows the current critical limit of this parameter</p>
+</li>
+<li>
+<p><strong>Critical Limit Set Button</strong> : This is the button used to set/change the critical limit for the current parameter.</p>
+</li>
+<li>
+<p><strong>Graph Title</strong> : This shows the title of the graph.</p>
+</li>
+<li>
+<p><strong>Start Time Query Selector</strong> : This is used to select the start time of your query to get the real time data.</p>
+</li>
+<li>
+<p><strong>End Time Query Selector</strong> : This is used to select the end time of your query to get the real time data.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If data is not available for the given time range, the recent most available data is given. Only in the case where the parameter has no data recorded ever, it will throw a warning.</p>
+</div>
+</li>
+<li>
+<p><strong>Query Submit Button</strong> : This is the button used to submit your query for real time data.</p>
+</li>
+<li>
+<p><strong>Detailed Graph Information Card</strong> : This information card shows the x and y axis names, units, and the current value of x and y axis when you hover the mouse over the graph.</p>
+</li>
+</ol>
+<p>The screens that shows the real time data (for dynamic parameter) is shown below</p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/tiei_3_edited.png"><img align="center" alt="Maintenance Section: Real Time Data - Dynamic Parameter" src="../images/tiei_3_edited.png"/></a></p>
+<p>The different sub sections of this maintenace section is explained below (as numbered in the image above)</p>
+<ol>
+<li><strong>Add/Edit Limits</strong> : This button is used to add (new or remove and replace existing) or append (to already existing) reference signal to the dynamic parameter.</li>
+</ol>
+<h2 id="alarm-monitoring-section">Alarm Monitoring Section</h2>
+<p>There section has one table to give the list of alarms for the selected machine in given time range, and three graphs:</p>
+<ul>
+<li>
+<p><strong>Alarm Count Vs Alarms</strong> - This shows a parito graph between the total count of alarms and the alarm (name), for the selected machine and time range.</p>
+</li>
+<li>
+<p><strong>Alarm Timespan Vs Alarms</strong> - This shows a parito graph between the total time (in seconds) of alarms and the alarm (name), for the selected machine and time range.</p>
+</li>
+<li>
+<p><strong>Alarm Timespans</strong> - This shows a pi chart of the different alarms according to their total alarm timespan in seconds.</p>
+</li>
+</ul>
+<h3 id="alarm-table">Alarm Table</h3>
+<p>The screens that shows the alarm table is shown below</p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/tiei_10_edited.png"><img align="center" alt="Alarm Monitoring Section: Alarms Table" src="../images/tiei_10_edited.png"/></a></p>
+<p>The different sub sections of this section is explained below (as numbered in the image above)</p>
+<ol>
+<li>
+<p><strong>Page Name</strong> : This shows the title of the page (Alarm Monitoring).</p>
+</li>
+<li>
+<p><strong>Machine Selection</strong> : This drop down box allows you to select the list of available machines</p>
+</li>
+<li>
+<p><strong>Date Query Type</strong> : This drop down box allows you to select the type of date query, such as last day, week, month or custom range.</p>
+</li>
+<li>
+<p><strong>Start Time Query Selector</strong> : This is used to select the start time of your query to get the alarm data.</p>
+</li>
+<li>
+<p><strong>End Time Query Selector</strong> : This is used to select the end time of your query to get the alarm time data.</p>
+</li>
+<li>
+<p><strong>Query Submit Button</strong> : This is the button used to submit your query for alarm data.</p>
+</li>
+<li>
+<p><strong>Table Name</strong> : This shows the title of the table.</p>
+</li>
+<li>
+<p><strong>Pagnation Selector</strong> : This button allows the user to select the number of rows to be displayed in the table and the page number.</p>
+</li>
+</ol>
+<h3 id="partio-graphs">Partio Graphs</h3>
+<p>The screens that shows the partio graphs for the <strong>Alarm Count Vs Alarms</strong> and <strong>Alarm Timespan Vs Alarms</strong> are shown below</p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/tiei_11_edited.png"><img align="center" alt="Alarm Monitoring Section: Parito Graph" src="../images/tiei_11_edited.png"/></a></p>
+<p>The different sub sections of this section is explained below (as numbered in the image above)</p>
+<ol>
+<li>
+<p><strong>Graph Name</strong> : This shows the title of the graph.</p>
+</li>
+<li>
+<p><strong>Hide/Reveal Button</strong> : This button is used to hide or reveal the graph.</p>
+</li>
+<li>
+<p><strong>Legend</strong> : This shows the legend of the graph.</p>
+</li>
+</ol>
+<h3 id="pi-chart">Pi Chart</h3>
+<p>The screens that shows the pi chart for the <strong>Alarm Timespan</strong> are shown below:</p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/tiei_12_edited.png"><img align="center" alt="Alarm Monitoring Section: Pi Chart" src="../images/tiei_12_edited.png"/></a></p>
+<p>The different sub sections of this section is explained below (as numbered in the image above)</p>
+<ol>
+<li>
+<p><strong>Graph Name</strong> : This shows the title of the graph.</p>
+</li>
+<li>
+<p><strong>Hide/Reveal Button</strong> : This button is used to hide or reveal the graph.</p>
+</li>
+<li>
+<p><strong>Legend</strong> : This shows the legend of the graph.</p>
+</li>
+</ol>
+<h2 id="spare-part-management">Spare Part Management</h2>
+<p>This section is used for spare part management, it has two views:</p>
+<ul>
+<li>
+<p><strong>Machine Details</strong> - This shows information card for all available machines and has a details button, which can be clicked to view the current status of it's spare part count.</p>
+</li>
+<li>
+<p><strong>Machine Specific Spare Part Details</strong> - This shows all the available spare parts for the machine, it's current part count and part count of the spare parts.</p>
+</li>
+</ul>
+<h3 id="all-machine-status">All Machine Status</h3>
+<p>The screens that shows the machine details is shown below</p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/tiei_spare_1.png"><img align="center" alt="Spare Part Management: Machine Details" src="../images/tiei_spare_1.png"/></a></p>
+<p>The different sub sections of this section is explained below (as numbered in the image above)</p>
+<ol>
+<li>
+<p><strong>Page Name</strong> : This shows the title of the page (Alarm Monitoring).</p>
+</li>
+<li>
+<p><strong>Machine Details</strong> : This shows the details of the machine. The different color represents the state of the machine, where warning / critical means any one or more of the spare parts of the machine has reached the limit and needs to be replaced.</p>
+</li>
+<li>
+<p><strong>Production Line Name</strong> : This shows the production line number.</p>
+</li>
+</ol>
+<h3 id="machine-specific-spare-part-details">Machine Specific Spare Part Details</h3>
+<p>The screens that shows the spare part details for a selected machine is shown below</p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/tiei_spare_2.png"><img align="center" alt="Spare Part Management: Machine Spare Part Details 1" src="../images/tiei_spare_2.png"/></a></p>
+<p>The different sub sections of this section is explained below (as numbered in the image above)</p>
+<ol>
+<li>
+<p><strong>Machine Name</strong> : This shows the prorduction line, machine name.</p>
+</li>
+<li>
+<p><strong>Cumulative Part Count</strong> : This shows the total/cumulative part count of the machine (irrespective of the number of times the reset button was pressed in the machine).</p>
+</li>
+<li>
+<p><strong>Current Part Count</strong> : This shows the current part count of the machine after the reset button was pressed.</p>
+</li>
+<li>
+<p><strong>Lock/Unlock Button</strong> : This button is used to lock and unlock the modification of the spare part, to avoid accidental changes. This has be unlocked before resetting the spare part count.</p>
+</li>
+<li>
+<p><strong>Add Part Button</strong> : This button is used to create a new spare part for the machine.</p>
+</li>
+<li>
+<p><strong>Spare Part Warning Limit</strong> : This shows the warning limit for the spare part.</p>
+</li>
+<li>
+<p><strong>Spare Part Critical Limit</strong> : This shows the critical limit for the spare part.</p>
+</li>
+</ol>
+<p>The screens that shows the spare part details for a selected machine after unlocking the table is shown below</p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/tiei_spare_3.png"><img align="center" alt="Spare Part Management: Machine Spare Part Details 2" src="../images/tiei_spare_3.png"/></a></p>
+<p>The different sub sections of this section is explained below (as numbered in the image above)</p>
+<ol>
+<li>
+<p><strong>Delete Spare Part Button</strong> : This button is used to delete the spare part from the database.</p>
+</li>
+<li>
+<p><strong>Current Spare Part Count</strong> : This shows the number of parts produced by the machine (irrespective of the number of time the reset button was pressed, since it take the cumulative value) since the spare part was created in the front end or since the reset button was pressed.</p>
+</li>
+<li>
+<p><strong>Spare Part Counter Reset Button</strong> : This button is used to reset the spare part count (to zero). This should be used once the part has been replaced in the machine.</p>
+</li>
+<li>
+<p><strong>Spare Part Warning Limit</strong> : This button can be used to set the warning limit for this spare part (activated only after the table is unlocked).</p>
+</li>
+<li>
+<p><strong>Spare Part Critical Limit</strong> : This button can be used to set the critical limit for this spare part (activated only after the table is unlocked).</p>
+</li>
+</ol>
+<h2 id="spm-machines">SPM Machines</h2>
+<p>This section is used for management of SPM machines, it has two views:</p>
+<h3 id="all-spm-machine-details">All SPM Machine Details</h3>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/tiei_spm_1.png"><img align="center" alt="SPM: Machine Details" src="../images/tiei_spm_1.png"/></a></p>
+<p>This shows information card for all available SPM machines and has a details button, which can be clicked to view the current status of its parameters as shown in the above image. The information card is highlighted in different colors (green ,orange, red) corresponding to it's (it's parameters) state.The different sub sections of this section is explained below (as numbered in the image above):</p>
+<ol>
+<li><strong>Machine Status</strong>  This shows the machine name, along with its status (color coded)</li>
+</ol>
+<h3 id="machine-specific-details">Machine Specific Details</h3>
+<p>This shows the real time graph for the spm. It can display three information</p>
+<p><strong>Static Parameter</strong> - All the parameters (both static and dynamic) are combined under parameters section, the static parameters will have critical and warning limits. The sample screen is shown below, The different sub sections of this section is explained below (as numbered in the image below).</p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/tiei_spm_7.png"><img align="center" alt="SPM: Machine Specific Details: Static" src="../images/tiei_spm_7.png"/></a></p>
+<ol>
+<li>
+<p><strong>Machine Name</strong> : This shows the machine name.</p>
+</li>
+<li>
+<p><strong>Limit Setter</strong> : This shows the current limits, and also allows the user to set the limits.</p>
+</li>
+<li>
+<p><strong>Query Submitter</strong> : This shows button is used to submit a real time data query.</p>
+</li>
+<li>
+<p><strong>Machine Parameter</strong> : This shows the parameter name, and it's condition (color coded by the box below the parameter name), there is a small check box (to the left of the parameter name) that allows the user to select the parameter that needs to be displayed.</p>
+</li>
+<li>
+<p><strong>Legend</strong> : This shows the legend for the graph, (as the user hovers over the graph, the values will be displayed over here)</p>
+</li>
+</ol>
+<p><strong>Dynamic Parameter</strong> - All the parameters (both static and dynamic) are combined under parameters section, the dynamic parameters will have button to add edit reference signal. The sample screen is shown below, The different sub sections of this section is explained below (as numbered in the image below)</p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/tiei_spm_6.png"><img align="center" alt="SPM: Machine Specific Details: Dynamic" src="../images/tiei_spm_6.png"/></a></p>
+<ol>
+<li><strong>Add/Edit Limits</strong> :  This button is used to add (new or remove and replace existing) or append (to already existing) reference signal to the dynamic parameter.</li>
+</ol>
+<p><strong>Position Based Query</strong> - The sample screen is shown below, The different sub sections of this section is explained below (as numbered in the image below)</p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/tiei_spm_5.png"><img align="center" alt="SPM: Machine Specific Details: Position" src="../images/tiei_spm_5.png"/></a></p>
+<ol>
+<li>
+<p><strong>Add/Edit Limits</strong> :  This button is used to add (new or remove and replace existing) or append (to already existing) reference signal to the dynamic parameter.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This screen is applicable only for laser cladding.</p>
+</div>
+</li>
+</ol>
+<h2 id="user-management">User Management</h2>
+<p>This section is used for user management:</p>
+<p>The screens that shows the user details is shown below</p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../images/tiei_user.png"><img align="center" alt="User Management" src="../images/tiei_user.png"/></a></p>
+<p>The different sub sections of this section is explained below (as numbered in the image above)</p>
+<ol>
+<li>
+<p><strong>Delete Button</strong> : This button is used to delete the user</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The admin user "cmti" cannot be deleted, for safety purposes.</p>
+</div>
+</li>
+<li>
+<p><strong>Add User Button</strong> : This button is used to add new user to the database</p>
+</li>
+</ol>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Project Overview" class="md-footer__link md-footer__link--prev" href=".." rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              Project Overview
+            </div>
+</div>
+</a>
+<a aria-label="Next: Technical Stack" class="md-footer__link md-footer__link--next" href="../Technical%20Stack/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              Technical Stack
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      For the Love of Manufacturing ❤️
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.078830c0.min.js"></script>
+<script src="../javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+</html>

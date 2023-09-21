@@ -1,0 +1,2088 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.4.0, mkdocs-material-8.5.6" name="generator"/>
+<title>Focas - SMDDC 2.0 IIOT Project Documentation</title>
+<link href="../../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
+<meta content="#009485" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gdesc-inner { font-size: 0.75rem; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="teal" data-md-color-primary="teal" data-md-color-scheme="" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#focas">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="SMDDC 2.0 IIOT Project Documentation" class="md-header__button md-logo" data-md-component="logo" href="../.." title="SMDDC 2.0 IIOT Project Documentation">
+<img alt="logo" src="../../images/cmti_logo_full_white_no_border.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            SMDDC 2.0 IIOT Project Documentation
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Focas
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="SMDDC 2.0 IIOT Project Documentation" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="SMDDC 2.0 IIOT Project Documentation">
+<img alt="logo" src="../../images/cmti_logo_full_white_no_border.png"/>
+</a>
+    SMDDC 2.0 IIOT Project Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Project Overview
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../user_interfaces/">
+        User Interface
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Technical%20Stack/">
+        Technical Stack
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Code%20%26%20Services%20Locations/">
+        Codes &amp; Services Location
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+          Code Explanation
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Code Explanation" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Code Explanation
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Code%20Explanation/Collector/">
+        Collector Services
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Code%20Explanation/Back%20End/">
+        Back End Services
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+          General Knowledge
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="General Knowledge" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          General Knowledge
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../OPC%20UA/">
+        Opc Ua
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../KPI%20in%20Manufacturing/">
+        KPIs in Manufacturing
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Focas
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Focas
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction">
+    Introduction
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quick-overview-of-csharp-and-project-setup-in-visual-studio">
+    Quick Overview of Csharp and Project setup in Visual Studio
+  </a>
+<nav aria-label="Quick Overview of Csharp and Project setup in Visual Studio" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction_1">
+    Introduction
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#solutions">
+    Solutions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#projects">
+    Projects
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#assemblies-and-dlls">
+    Assemblies and DLLs
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#namespaces">
+    Namespaces
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#default-namespace-in-visual-studio">
+    Default Namespace in Visual Studio
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sample-project-setup">
+    Sample Project Setup
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-directory-structure">
+    Project Directory Structure
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-namespaces-and-external-libraries-in-c">
+    Working with Namespaces and External Libraries in C
+  </a>
+<nav aria-label="Working with Namespaces and External Libraries in C" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction_2">
+    Introduction
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#namespaces-in-c">
+    Namespaces in C
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-statements-and-namespaces">
+    Using Statements and Namespaces
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#syntax">
+    Syntax:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example">
+    Example:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#including-external-libraries-and-using-statements">
+    Including External Libraries and Using Statements
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example_1">
+    Example:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-fwlib32cs-file-and-global-namespace">
+    The fwlib32.cs File and Global Namespace
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-the-fwlibcs-library-to-a-visual-studio-project">
+    Adding the fwlib.cs Library to a Visual Studio Project
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#steps">
+    Steps
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#purpose">
+    Purpose
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#programs-to-demonstrate-focas-api">
+    Programs to Demonstrate Focas API
+  </a>
+<nav aria-label="Programs to Demonstrate Focas API" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-sample-1">
+    CODE SAMPLE 1
+  </a>
+<nav aria-label="CODE SAMPLE 1" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code">
+    CODE
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explanation">
+    Explanation:
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-sample-2">
+    CODE SAMPLE 2
+  </a>
+<nav aria-label="CODE SAMPLE 2" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code_1">
+    Code
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explanation_1">
+    Explanation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mode">
+    MODE
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-sample-3">
+    CODE SAMPLE 3
+  </a>
+<nav aria-label="CODE SAMPLE 3" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code_2">
+    Code
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explanation_2">
+    EXPLANATION
+  </a>
+<nav aria-label="EXPLANATION" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sample-sequence-of-machine-state">
+    SAMPLE SEQUENCE OF MACHINE STATE
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-sample-4">
+    CODE SAMPLE 4
+  </a>
+<nav aria-label="CODE SAMPLE 4" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code_3">
+    Code
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explanation_3">
+    EXPLANATION
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-sample-5">
+    CODE SAMPLE 5
+  </a>
+<nav aria-label="CODE SAMPLE 5" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code_4">
+    Code
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explanation_4">
+    Explanation
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+          Project Knowledge
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Project Knowledge" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          Project Knowledge
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Project%20Knowledge/Machines/">
+        Machines
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Project%20Knowledge/KPI%20Calculations/">
+        KPIs Calculations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Project%20Knowledge/KPI%20Calculations%20%28CMTI%29/">
+        KPIs Calculations (CMTI)
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Troubleshoot_Faq/">
+        Troubleshooting &amp; FAQ
+      </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction">
+    Introduction
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quick-overview-of-csharp-and-project-setup-in-visual-studio">
+    Quick Overview of Csharp and Project setup in Visual Studio
+  </a>
+<nav aria-label="Quick Overview of Csharp and Project setup in Visual Studio" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction_1">
+    Introduction
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#solutions">
+    Solutions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#projects">
+    Projects
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#assemblies-and-dlls">
+    Assemblies and DLLs
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#namespaces">
+    Namespaces
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#default-namespace-in-visual-studio">
+    Default Namespace in Visual Studio
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sample-project-setup">
+    Sample Project Setup
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-directory-structure">
+    Project Directory Structure
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-namespaces-and-external-libraries-in-c">
+    Working with Namespaces and External Libraries in C
+  </a>
+<nav aria-label="Working with Namespaces and External Libraries in C" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction_2">
+    Introduction
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#namespaces-in-c">
+    Namespaces in C
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-statements-and-namespaces">
+    Using Statements and Namespaces
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#syntax">
+    Syntax:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example">
+    Example:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#including-external-libraries-and-using-statements">
+    Including External Libraries and Using Statements
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example_1">
+    Example:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-fwlib32cs-file-and-global-namespace">
+    The fwlib32.cs File and Global Namespace
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-the-fwlibcs-library-to-a-visual-studio-project">
+    Adding the fwlib.cs Library to a Visual Studio Project
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#steps">
+    Steps
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#purpose">
+    Purpose
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#programs-to-demonstrate-focas-api">
+    Programs to Demonstrate Focas API
+  </a>
+<nav aria-label="Programs to Demonstrate Focas API" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-sample-1">
+    CODE SAMPLE 1
+  </a>
+<nav aria-label="CODE SAMPLE 1" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code">
+    CODE
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explanation">
+    Explanation:
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-sample-2">
+    CODE SAMPLE 2
+  </a>
+<nav aria-label="CODE SAMPLE 2" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code_1">
+    Code
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explanation_1">
+    Explanation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mode">
+    MODE
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-sample-3">
+    CODE SAMPLE 3
+  </a>
+<nav aria-label="CODE SAMPLE 3" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code_2">
+    Code
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explanation_2">
+    EXPLANATION
+  </a>
+<nav aria-label="EXPLANATION" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sample-sequence-of-machine-state">
+    SAMPLE SEQUENCE OF MACHINE STATE
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-sample-4">
+    CODE SAMPLE 4
+  </a>
+<nav aria-label="CODE SAMPLE 4" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code_3">
+    Code
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explanation_3">
+    EXPLANATION
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-sample-5">
+    CODE SAMPLE 5
+  </a>
+<nav aria-label="CODE SAMPLE 5" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code_4">
+    Code
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#explanation_4">
+    Explanation
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="focas">Focas</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Fanuc Focas API is a programming interface provided by Fanuc, a leading manufacturer of industrial robots and CNC (Computer Numerical Control) systems. The Focas API allows developers to interact with and control Fanuc CNC systems using various programming languages. It provides a set of functions and commands that enable applications to retrieve information from CNC controllers, monitor machine status, send commands, and perform data exchanges with the CNC system. The Focas API is widely used in industries such as manufacturing, automation, and robotics to develop custom software solutions for Fanuc CNC machines.</p>
+<h2 id="quick-overview-of-csharp-and-project-setup-in-visual-studio">Quick Overview of Csharp and Project setup in Visual Studio</h2>
+<h3 id="introduction_1">Introduction</h3>
+<p>In C# and .NET, projects are organized using solutions, which consist of one or more projects. This documentation provides an overview of the project structure and key concepts related to C# and .NET development.</p>
+<h3 id="solutions">Solutions</h3>
+<ul>
+<li>Solutions serve as containers for organizing multiple projects in C# and .NET development.</li>
+<li>A solution represents a higher-level unit that groups related projects together.</li>
+<li>Solutions provide a convenient way to manage dependencies and build configurations for complex software systems.</li>
+</ul>
+<h3 id="projects">Projects</h3>
+<ul>
+<li>Projects are the building blocks of a solution and contain the source code and other related files.</li>
+<li>A solution can have multiple projects, each representing a distinct component or module.</li>
+<li>Projects are typically used to organize and manage different aspects of the software solution.</li>
+</ul>
+<h3 id="assemblies-and-dlls">Assemblies and DLLs</h3>
+<ul>
+<li>Once a project is compiled, it produces assemblies or DLLs (Dynamic Link Libraries).</li>
+<li>Assemblies are the output files of the compilation process and contain executable code and other resources.</li>
+<li>Assemblies can be thought of as a group of related namespaces and types.</li>
+</ul>
+<h3 id="namespaces">Namespaces</h3>
+<ul>
+<li>Namespaces are used to organize and group related classes, interfaces, and other types within a project.</li>
+<li>Namespaces provide a way to avoid naming conflicts and provide logical separation between different components of the codebase.</li>
+<li>Namespaces make it easier to manage and navigate large codebases by providing a hierarchical structure.</li>
+</ul>
+<h3 id="default-namespace-in-visual-studio">Default Namespace in Visual Studio</h3>
+<ul>
+<li>By default, Visual Studio will create a namespace that matches the name of the project.</li>
+<li>The default namespace helps maintain a clear and consistent structure for the code within the project.</li>
+<li>Developers can modify the namespace to suit their needs, but it is generally recommended to keep it aligned with the project name.</li>
+</ul>
+<p>The following diagram shows the above hierarchy as an UML diagram</p>
+<pre class="mermaid"><code>flowchart TB
+  subgraph SOLUTION
+    direction TB
+    Solution((Solution))
+    Solution --&gt; Project1
+    Solution --&gt; Project2
+  end
+  subgraph PROJECT
+    direction TB
+    Project1((Project1))
+    Project1 --&gt; Assembly1
+    Project1 --&gt; Assembly2
+  end
+  subgraph ASSEMBLY
+    direction TB
+    Assembly1((Assembly1))
+    Assembly2((Assembly2))
+    Assembly1 --&gt; Namespace1
+    Assembly1 --&gt; Namespace2
+  end
+  subgraph NAMESPACE
+    direction TB
+    Namespace1((Namespace1))
+    Namespace2((Namespace2))
+    Namespace1 --&gt; Class1
+    Namespace1 --&gt; Class2
+  end
+  subgraph CLASS
+    direction TB
+    Class1((Class1))
+    Class2((Class2))
+    Class1 --&gt; Attribute1
+    Class1 --&gt; Method1
+  end</code></pre>
+<h3 id="sample-project-setup">Sample Project Setup</h3>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../../../images/project_setup_fanuc.png"><img align="center" alt="Sample Project Setup" src="../../../images/project_setup_fanuc.png"/></a></p>
+<h3 id="project-directory-structure">Project Directory Structure</h3>
+<pre><code>FanucFocas                      # The project root (i guess its a directory)
+    properties/                 # This directory may contain project-specific properties or settings files
+    references/                 # This directory may contain references to external libraries or dependencies, dll, etc
+    App.config/                 # This file is a configuration file for the application. It may contain settings such as connection strings, application-specific configurations, or environment variables.
+    fwlib32.cs/                 # This file represents the Focas library for CNC/PMC Data Window Library for FOCAS1/Ethernet. It contains the necessary classes and functions for interacting with 
+                                # Focas enabled CNC machines.
+    packages.config/            # This file is used in older versions of .NET Framework projects to manage NuGet package references. It specifies the packages and their versions used in the project.
+    Program.cs                  # This file is the entry point of the application. It contains the main code that is executed when the application starts.
+</code></pre>
+<h3 id="working-with-namespaces-and-external-libraries-in-c">Working with Namespaces and External Libraries in C</h3>
+<h4 id="introduction_2">Introduction</h4>
+<p>In C#, namespaces are used to organize and group related classes, structures, and other types. They provide a way to avoid naming conflicts and improve code organization. When working with external libraries, such as the Focas library in your project, namespaces play a crucial role in referencing and accessing the library's classes and structures.</p>
+<h4 id="namespaces-in-c">Namespaces in C</h4>
+<ul>
+<li>Namespaces are used to logically organize and group related code elements.</li>
+<li>They provide a hierarchical structure and help in avoiding naming conflicts.</li>
+<li>Namespaces improve code readability and maintainability.</li>
+</ul>
+<h4 id="using-statements-and-namespaces">Using Statements and Namespaces</h4>
+<ul>
+<li>To use classes and structures from a namespace, you need to include a <strong>using statement</strong> at the top of your file.</li>
+<li>The using statement allows you to access the classes and structures directly without specifying the fully qualified names.</li>
+</ul>
+<h4 id="syntax">Syntax:</h4>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">NamespaceName</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h4 id="example">Example:</h4>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">MyLibrary</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<ul>
+<li>In the example above, <code>System</code> and <code>MyLibrary</code> are namespaces that contain the desired classes and structures.</li>
+</ul>
+<h4 id="including-external-libraries-and-using-statements">Including External Libraries and Using Statements</h4>
+<ul>
+<li>When working with external libraries, you need to include the library's files in your project.</li>
+<li>The files containing the classes and structures for the library should be located in a specific directory within your project.</li>
+<li>To access the library's classes and structures, you need to specify the appropriate using statement with the library's namespace.</li>
+</ul>
+<h4 id="example_1">Example:</h4>
+<p><div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">FocasLibrary</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+- In this example, <code>FocasLibrary</code> is the namespace where the classes and structures from the Focas library are defined.
+- The using statement allows you to access those classes and structures directly in your code.</p>
+<h4 id="the-fwlib32cs-file-and-global-namespace">The fwlib32.cs File and Global Namespace</h4>
+<ul>
+<li>In the provided fwlib32.cs file (as shown in the project directory), the namespace is not explicitly defined (you can open the file and check it out).    </li>
+<li>However, when you include the fwlib32.cs file in your project and build it, the classes and structures in fwlib32.cs are treated as part of the global namespace.</li>
+<li>The global namespace includes all code elements that are not explicitly placed within a namespace.</li>
+<li>This means that you can directly reference the classes and structures from fwlib32.cs without the need for a using statement.</li>
+</ul>
+<h4 id="adding-the-fwlibcs-library-to-a-visual-studio-project">Adding the <code>fwlib.cs</code> Library to a Visual Studio Project</h4>
+<p>The following steps outline how to add the <code>fwlib.cs</code> library file to your current working project in Visual Studio. The <code>fwlib.cs</code> file contains the library code that you want to include in your project.</p>
+<h4 id="steps">Steps</h4>
+<ol>
+<li>
+<p>Open your project in Visual Studio.</p>
+</li>
+<li>
+<p>In the Solution Explorer, locate your project folder.</p>
+</li>
+<li>
+<p>Right-click on your project folder to open the context menu.</p>
+</li>
+<li>
+<p>From the context menu, select "Add" and then choose "Existing Item." This action opens the file selection dialog.</p>
+</li>
+<li>
+<p>In the file selection dialog, navigate to the location where the <code>fwlib.cs</code> file is located on your computer.</p>
+</li>
+<li>
+<p>Select the <code>fwlib.cs</code> file.</p>
+</li>
+<li>
+<p>Click the "Add" button. This action adds the <code>fwlib.cs</code> file to your project.</p>
+</li>
+</ol>
+<p>The following figure shows how to add the library file in visual studio</p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../../../images/adding_fwlib.png"><img align="center" alt="Adding fwlib32.cs" src="../../../images/adding_fwlib.png"/></a></p>
+<h4 id="purpose">Purpose</h4>
+<p>Adding the <code>fwlib.cs</code> library file to your Visual Studio project is necessary to include the library's code in your project. By doing so, the compiler recognizes the library and its contents, enabling you to utilize its functionality in your code.</p>
+<h2 id="programs-to-demonstrate-focas-api">Programs to Demonstrate Focas API</h2>
+<h3 id="code-sample-1">CODE SAMPLE 1</h3>
+<h4 id="code">CODE</h4>
+<p>Here is a sample c# code to get the machine state using fanuc focas api</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="nn">System.Linq</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="nn">System.Text</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="nn">System.Threading.Tasks</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">namespace</span><span class="w"> </span><span class="nn">FanucFocas</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">static</span><span class="w"> </span><span class="kt">ushort</span><span class="w"> </span><span class="n">_handle</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">static</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="n">_ret</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Starting"</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">_ret</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">cnc_allclibhndl3</span><span class="p">(</span><span class="s">"172.18.30.147"</span><span class="p">,</span><span class="w"> </span><span class="m">8193</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="n">_handle</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_ret</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">EW_OK</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Cannot Connect"</span><span class="p">);</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">                </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"Our Focas Handle is {_handle}"</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                    </span><span class="kt">string</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">GetMode</span><span class="p">();</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"\n\nMode is {mode}"</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">Focas1</span><span class="p">.</span><span class="n">cnc_freelibhndl</span><span class="p">(</span><span class="n">_handle</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">GetMode</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_handle</span><span class="w"> </span><span class="p">==</span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Get a handle"</span><span class="p">);</span><span class="w"></span>
+<span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="s">""</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">Focas1</span><span class="p">.</span><span class="n">ODBST</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">ODBST</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">_ret</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">cnc_statinfo</span><span class="p">(</span><span class="n">_handle</span><span class="p">,</span><span class="w"> </span><span class="n">mode</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_ret</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Error: Cannot obtain mode data"</span><span class="p">);</span><span class="w"></span>
+<span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="s">""</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="s">$"Mode is {mode.aut}"</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h4 id="explanation">Explanation:</h4>
+<p>The given C# code demonstrates the usage of the Fanuc Focas API to connect to a Fanuc CNC system and retrieve the operating mode information. Let's go through the code step by step:</p>
+<ol>
+<li>
+<p>The code begins with the necessary using statements to import the required namespaces for the program.</p>
+</li>
+<li>
+<p>The FanucFocas namespace is defined to encapsulate the code.</p>
+</li>
+<li>
+<p>Within the FanucFocas namespace, the Program class is defined.</p>
+</li>
+<li>
+<p>The program declares some static variables: _handle of type ushort (unsigned short) to store the handle for the Focas connection, and _ret of type short to store the return values of Focas API functions.</p>
+</li>
+<li>
+<p>The Main method is the entry point of the program. It starts by printing "Starting" to the console.</p>
+</li>
+<li>
+<p>The Focas API function Focas1.cnc_allclibhndl3 is called to establish a connection with the Fanuc CNC system. The method takes the IP address (in this case, "172.18.30.147"), port number (8193), Focas version (6), and an out parameter _handle to receive the handle for the connection. The return value _ret is checked to determine if the connection was successful.</p>
+</li>
+<li>
+<p>If the connection fails, the program prints "Cannot Connect" to the console and waits for user input before exiting.</p>
+</li>
+<li>
+<p>If the connection succeeds, the program prints the obtained _handle value to the console.</p>
+</li>
+<li>
+<p>The GetMode method is called to retrieve the operating mode information from the CNC system.</p>
+</li>
+<li>
+<p>Inside the GetMode method, it first checks if a valid handle _handle exists. If not, it prints "Get a handle" to the console and returns an empty string.</p>
+</li>
+<li>
+<p>It declares an instance of the ODBST struct (a structure provided by the Focas API) named mode.</p>
+</li>
+<li>
+<p>The Focas API function Focas1.cnc_statinfo is called to obtain the mode data using the handle _handle and the mode variable. The return value _ret is checked to ensure successful data retrieval.</p>
+</li>
+<li>
+<p>If the data retrieval is successful, it returns a string indicating the mode by accessing the aut property of the mode struct.</p>
+</li>
+<li>
+<p>Finally, the obtained mode information is printed to the console.</p>
+</li>
+<li>
+<p>The program waits for user input before exiting.</p>
+</li>
+<li>
+<p>After reading the user input, the program calls Focas1.cnc_freelibhndl to free the allocated Focas library handle.</p>
+</li>
+</ol>
+<p>Overall, this code demonstrates the basic usage of the Fanuc Focas API in C# to establish a connection with a Fanuc CNC system and retrieve the operating mode information.</p>
+<h3 id="code-sample-2">CODE SAMPLE 2</h3>
+<h4 id="code_1">Code</h4>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="nn">System.Linq</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="nn">System.Text</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="nn">System.Threading.Tasks</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">namespace</span><span class="w"> </span><span class="nn">FanucFocas</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">static</span><span class="w"> </span><span class="kt">ushort</span><span class="w"> </span><span class="n">_handle</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">static</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="n">_ret</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Starting"</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">_ret</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">cnc_allclibhndl3</span><span class="p">(</span><span class="s">"172.18.30.147"</span><span class="p">,</span><span class="w"> </span><span class="m">8193</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="n">_handle</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_ret</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">EW_OK</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Cannot Connect"</span><span class="p">);</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">                </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"Our Focas Handle is {_handle}"</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                    </span><span class="kt">string</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">GetMode</span><span class="p">();</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"\n\nMode is {mode}"</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">Focas1</span><span class="p">.</span><span class="n">cnc_freelibhndl</span><span class="p">(</span><span class="n">_handle</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">GetMode</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_handle</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Get a handle"</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="s">""</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">Focas1</span><span class="p">.</span><span class="n">ODBST</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">ODBST</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">_ret</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">cnc_statinfo</span><span class="p">(</span><span class="n">_handle</span><span class="p">,</span><span class="w"> </span><span class="n">mode</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_ret</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Error: Cannot obtain mode data"</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="s">""</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">mode</span><span class="p">.</span><span class="n">aut</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">0</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"MDI"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">1</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"MEM"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">3</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"EDIT"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">4</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"MPG"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">5</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"JOG"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">6</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"Teach in JOG"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">7</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"Teach in HND"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">8</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"INC"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">9</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"REF"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">10</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"RMT"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">default</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"UNAVAILABLE"</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h4 id="explanation_1">Explanation</h4>
+<ol>
+<li>
+<p>The code begins with the necessary using statements to import the required namespaces for the program.</p>
+</li>
+<li>
+<p>The <code>FanucFocas</code> namespace is defined to encapsulate the code.</p>
+</li>
+<li>
+<p>Within the <code>FanucFocas</code> namespace, the <code>Program</code> class is defined.</p>
+</li>
+<li>
+<p>The program declares some static variables: <code>_handle</code> of type <code>ushort</code> (unsigned short) to store the handle for the Focas connection, and <code>_ret</code> of type <code>short</code> to store the return values of Focas API functions.</p>
+</li>
+<li>
+<p>The <code>Main</code> method is the entry point of the program. It starts by printing "Starting" to the console.</p>
+</li>
+<li>
+<p>The Focas API function <code>Focas1.cnc_allclibhndl3</code> is called to establish a connection with the Fanuc CNC system. The method takes the IP address (in this case, "172.18.30.147"), port number (8193), Focas version (6), and an <code>out</code> parameter <code>_handle</code> to receive the handle for the connection. The return value <code>_ret</code> is checked to determine if the connection was successful.</p>
+</li>
+<li>
+<p>If the connection fails, the program prints "Cannot Connect" to the console and waits for user input before exiting.</p>
+</li>
+<li>
+<p>If the connection succeeds, the program prints the obtained <code>_handle</code> value to the console.</p>
+</li>
+<li>
+<p>The <code>GetMode</code> method is called to retrieve the operating mode information from the CNC system.</p>
+</li>
+<li>
+<p>Inside the <code>GetMode</code> method, it first checks if a valid handle <code>_handle</code> exists. If not, it prints "Get a handle" to the console and returns an empty string.</p>
+</li>
+<li>
+<p>It declares an instance of the <code>ODBST</code> struct (a structure provided by the Focas API) named <code>mode</code>.</p>
+</li>
+<li>
+<p>The Focas API function <code>Focas1.cnc_statinfo</code> is called to obtain the mode data using the handle <code>_handle</code> and the <code>mode</code> variable. The return value <code>_ret</code> is checked to ensure successful data retrieval.</p>
+</li>
+<li>
+<p>If the data retrieval is successful, a <code>switch</code> statement is used to map the <code>mode.aut</code> value to the corresponding operating mode string.</p>
+</li>
+<li>
+<p>The operating mode string is returned.</p>
+</li>
+<li>
+<p>Finally, the obtained mode information is printed to the console.</p>
+</li>
+<li>
+<p>The program waits for user input before exiting.</p>
+</li>
+<li>
+<p>After reading the user input, the program calls <code>Focas1.cnc_freelibhndl</code> to free the allocated Focas library handle.</p>
+</li>
+</ol>
+<h4 id="mode">MODE</h4>
+<p>The different modes and their corresponding full forms are as follows:</p>
+<ol>
+<li>
+<p><code>MDI</code> (Manual Data Input): In this mode, the operator has the ability to input instructions and programs directly into the CNC system manually. While it is not necessary for the operation to be limited to a single line, sometimes we require a simple operation like tool change, which can be accomplished in MDI mode. To achieve this, the machine must be set to MDI mode, and then, using the Human Machine Interface (HMI), the operator can manually enter the G Code that needs to be executed. Once the code is entered, the operator can initiate the cycle start by pressing the corresponding button. An example of such a process can be seen in the video provided. For instance, the code <code>T01 M06</code> would be used to change to tool number 1. <a href="https://www.youtube.com/watch?v=FEYfgde8X-0">Video</a> .</p>
+</li>
+<li>
+<p><code>MEM</code> (Memory): In this mode, the CNC system runs programs stored in its memory. This mode is known as the automatic mode, where the CNC machine loads the entire G Code file into its memory and executes it automatically, without any manual intervention. In this mode, the machine follows the instructions provided in the G Code file from start to finish. The entire code is executed sequentially, allowing for a fully automated operation. The machine takes care of executing each command in the G Code file without requiring any further input or interaction from the operator.</p>
+</li>
+<li>
+<p><code>EDIT</code> (Edit): At times, it becomes necessary to make changes to an existing CNC program, such as adjusting the feed rate or spindle speed. In such cases, the Edit mode provides the operator with the capability to modify or create CNC programs using an editing interface. This mode offers a user-friendly interface specifically designed for editing purposes. The operator can access the program and make the desired modifications, such as changing parameters, adding or removing commands, or adjusting settings related to feed rate and spindle speed. The Edit mode empowers the operator to fine-tune CNC programs to meet specific requirements, ensuring flexibility and customization in the machining process. <a href="https://www.youtube.com/watch?v=ew1wzUmSRrw">video</a>.</p>
+</li>
+<li>
+<p><code>MPG</code> (Manual Pulse Generator): MPG mode is a specific operating mode in CNC systems that allows the operator to manually control the machine's movement using a manual pulse generator device. The manual pulse generator is a handheld device equipped with a rotary knob or wheels that provide precise control over machine motion. In MPG mode, the operator can manually generate pulses or increments of movement using the manual pulse generator. Each pulse corresponds to a specific movement increment, such as a defined distance or angular rotation. By rotating the knob or wheels, the operator can control the speed and direction of the machine tool's movement. By providing precise control over machine movement, MPG mode enhances operator interaction and enables fine adjustments or manual operations that require a high degree of accuracy. It offers a versatile and hands-on approach to machine control, complementing other modes and functionalities provided by CNC systems. <a href="https://youtu.be/GbHLe3g3HGg">Video</a>. MPG mode is particularly useful in various scenarios, including:</p>
+<ul>
+<li>
+<p>Fine Positioning: MPG mode allows operators to make small, precise adjustments to position the machine tool accurately. It provides a tactile and intuitive control mechanism, enabling fine-tuning and alignment of workpieces or tooling.</p>
+</li>
+<li>
+<p>Manual Operation: During setup, testing, or maintenance tasks, operators may need to manually control the machine tool for specific operations. MPG mode offers a convenient way to perform manual movements, such as tool alignment, verifying clearances, or inspecting workpiece details.</p>
+</li>
+<li>
+<p>Manual Machining: In certain situations, manual machining or manual intervention is required for complex or delicate operations. MPG mode allows the operator to manually guide the machine tool along the desired path, ensuring precise machining in real-time.</p>
+</li>
+<li>
+<p>Jogging: MPG mode can also be used for jogging the machine tool, allowing the operator to move the machine incrementally in different directions. This feature is useful for step-by-step setup, alignment, or manual machining tasks.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>JOG</code> (Jogging): Jog mode allows the operator to manually move the machine tool in different directions incrementally. Jogging (as an operation, not as a mode) is an essential functionality in CNC (Computer Numerical Control) systems that allows operators to manually move the machine tool in a controlled manner. In jogging mode, the operator can incrementally move the machine tool in different directions, providing flexibility and precision in positioning and setup tasks. Jogging is widely used in various applications, including CNC machining, milling, turning, routing, and more. It offers operators a hands-on approach to position and align the machine tool precisely. By enabling manual control, jogging enhances the operator's ability to perform fine adjustments, verify positions, and ensure optimal machine performance. Here's more information about jogging:</p>
+<ul>
+<li>
+<p>Incremental Movements: Jogging enables the operator to move the machine tool incrementally in small steps. The step size can be predefined or adjustable, allowing for fine-tuning of machine positions. The operator typically controls the movement using dedicated buttons, a pendant, or a control panel.</p>
+</li>
+<li>
+<p>Directional Control: Jogging allows movement in multiple directions, such as X, Y, and Z axes. The operator can move the machine tool along each axis independently or simultaneously, depending on the machine's configuration and capabilities.</p>
+</li>
+<li>
+<p>Speed Control: Jogging mode often provides speed control options. Operators can adjust the speed of movement to match the specific requirements of the task. This feature allows for precise positioning and control over the machine tool's motion.</p>
+</li>
+<li>
+<p>Manual Alignment: Jogging is commonly used for aligning tools or workpieces. By manually moving the machine tool, operators can align the cutting tool with the desired position on the workpiece, ensuring accurate machining.</p>
+</li>
+<li>
+<p>Setup and Inspection: Jogging is valuable during setup and inspection tasks. Operators can jog the machine tool to specific positions, allowing them to verify clearances, check dimensions, or align fixtures accurately. It helps in verifying that the workpiece and tooling are correctly positioned before starting automated machining operations.</p>
+</li>
+<li>
+<p>User-Friendly Interface: CNC systems often provide user-friendly interfaces for jogging, including dedicated jog wheels, control pendants, or software-based jog controls. These interfaces enhance the operator's experience by providing intuitive controls and real-time feedback on the machine tool's position.</p>
+</li>
+<li>
+<p>The same jogginf functionality can be achieved</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>Teach in JOG</code>: This mode is similar to the JOG mode but specifically designed for teaching the machine by manually moving it through the desired motions.</p>
+</li>
+<li>
+<p><code>Teach in HND</code> (Teach in Handle): This mode enables the operator to control the machine's movement using a manual control handle.</p>
+</li>
+<li>
+<p><code>INC</code> (Incremental): In this mode, the machine tool moves incrementally based on defined increments or distances.</p>
+</li>
+<li>
+<p><code>REF</code> (Reference): The Reference mode allows the machine tool to perform a homing or reference operation.</p>
+</li>
+<li>
+<p><code>RMT</code> (Remote): Remote mode enables the CNC system to receive commands and instructions from an external device or computer.</p>
+</li>
+<li>
+<p><code>UNAVAILABLE</code>: This is the default case when the mode information is unavailable or cannot be retrieved from the CNC system.</p>
+</li>
+</ol>
+<p>Please note that the full forms provided here are general explanations and may vary depending on the specific CNC system or context.</p>
+<h3 id="code-sample-3">CODE SAMPLE 3</h3>
+<h4 id="code_2">Code</h4>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="nn">System.Linq</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="nn">System.Text</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="nn">System.Threading.Tasks</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">namespace</span><span class="w"> </span><span class="nn">FanucFocas</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">static</span><span class="w"> </span><span class="kt">ushort</span><span class="w"> </span><span class="n">_handle</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">static</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="n">_ret</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Starting"</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">_ret</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">cnc_allclibhndl3</span><span class="p">(</span><span class="s">"172.18.30.147"</span><span class="p">,</span><span class="w"> </span><span class="m">8193</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="n">_handle</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_ret</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">EW_OK</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Cannot Connect"</span><span class="p">);</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">                </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"Our Focas Handle is {_handle}"</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                    </span><span class="kt">string</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">GetMode</span><span class="p">();</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"\n\nMode is {mode}"</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">Focas1</span><span class="p">.</span><span class="n">cnc_freelibhndl</span><span class="p">(</span><span class="n">_handle</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">GetMode</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_handle</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Get a handle"</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="s">""</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">Focas1</span><span class="p">.</span><span class="n">ODBST</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">ODBST</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">_ret</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">cnc_statinfo</span><span class="p">(</span><span class="n">_handle</span><span class="p">,</span><span class="w"> </span><span class="n">mode</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_ret</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Error: Cannot obtain mode data"</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="s">""</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">mode</span><span class="p">.</span><span class="n">aut</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">0</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"MDI"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">1</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"MEM"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">3</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"EDIT"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">4</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"MPG"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">5</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"JOG"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">6</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"Teach in JOG"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">7</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"Teach in HND"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">8</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"INC"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">9</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"REF"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">10</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"RMT"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">default</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"UNAVAILABLE"</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">GetStatus</span><span class="p">()</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_handle</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Get a handle"</span><span class="p">);</span><span class="w"></span>
+<span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="s">""</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">Focas1</span><span class="p">.</span><span class="n">ODBST</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">ODBST</span><span class="p">();</span><span class="w"></span>
+<span class="w">                </span><span class="n">_ret</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">cnc_statinfo</span><span class="p">(</span><span class="n">_handle</span><span class="p">,</span><span class="w"> </span><span class="n">status</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_ret</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Error: Cannot obtain status data"</span><span class="p">);</span><span class="w"></span>
+<span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="s">""</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">status</span><span class="p">.</span><span class="n">run</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="k">case</span><span class="w"> </span><span class="m">0</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"*****"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="k">case</span><span class="w"> </span><span class="m">1</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"STOP"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="k">case</span><span class="w"> </span><span class="m">2</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"HOLD"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="k">case</span><span class="w"> </span><span class="m">3</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"STRT"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="k">case</span><span class="w"> </span><span class="m">4</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"MSTR"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="k">default</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"UNAVAILABLE"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h4 id="explanation_2">EXPLANATION</h4>
+<p>The given code is a C# program that uses the Fanuc Focas API to connect to a Fanuc CNC system, retrieve the operating mode information, and obtain the status of the CNC machine. Here's a breakdown of the code:</p>
+<ol>
+<li>
+<p>The code begins with the necessary using statements to import the required namespaces for the program.</p>
+</li>
+<li>
+<p>The FanucFocas namespace is defined to encapsulate the code.</p>
+</li>
+<li>
+<p>Within the FanucFocas namespace, the Program class is defined.</p>
+</li>
+<li>
+<p>The program declares some static variables: <code>_handle</code> of type <code>ushort</code> (unsigned short) to store the handle for the Focas connection, and <code>_ret</code> of type <code>short</code> to store the return values of Focas API functions.</p>
+</li>
+<li>
+<p>The <code>Main</code> method is the entry point of the program. It starts by printing "Starting" to the console.</p>
+</li>
+<li>
+<p>The Focas API function <code>Focas1.cnc_allclibhndl3</code> is called to establish a connection with the Fanuc CNC system. The method takes the IP address (in this case, "172.18.30.147"), port number (8193), Focas version (6), and an <code>out</code> parameter <code>_handle</code> to receive the handle for the connection. The return value <code>_ret</code> is checked to determine if the connection was successful.</p>
+</li>
+<li>
+<p>If the connection fails, the program prints "Cannot Connect" to the console and waits for user input before exiting.</p>
+</li>
+<li>
+<p>If the connection succeeds, the program prints the obtained <code>_handle</code> value to the console.</p>
+</li>
+<li>
+<p>The <code>GetMode</code> method is called to retrieve the operating mode information from the CNC system.</p>
+</li>
+<li>
+<p>Inside the <code>GetMode</code> method, it first checks if a valid handle <code>_handle</code> exists. If not, it prints "Get a handle" to the console and returns an empty string.</p>
+</li>
+<li>
+<p>It declares an instance of the <code>ODBST</code> struct (a structure provided by the Focas API) named <code>mode</code>.</p>
+</li>
+<li>
+<p>The Focas API function <code>Focas1.cnc_statinfo</code> is called to obtain the mode data using the handle <code>_handle</code> and the <code>mode</code> variable. The return value <code>_ret</code> is checked to ensure successful data retrieval.</p>
+</li>
+<li>
+<p>If the data retrieval is successful, a <code>switch</code> statement is used to map the <code>mode.aut</code> value to the corresponding operating mode string.</p>
+</li>
+<li>
+<p>The operating mode string is returned and printed to the console.</p>
+</li>
+<li>
+<p>The <code>GetStatus</code> method is also defined to retrieve the current status of the CNC machine.</p>
+</li>
+<li>
+<p>The <code>GetStatus</code> method is similar to <code>GetMode</code> and follows the same pattern of checking the handle, declaring an instance of the <code>ODBST</code> struct for status, calling <code>cnc_statinfo</code>, and using a <code>switch</code> statement to map the <code>status.run</code> value to the corresponding status string.</p>
+</li>
+<li>
+<p>Finally, the obtained status information is returned and printed to the console.</p>
+</li>
+<li>
+<p>The program waits for user input before exiting.</p>
+</li>
+</ol>
+<p>The <code>cnc_statinfo</code> function is part of the FANUC FOCAS library, which is used for CNC machine control. This function is used to retrieve the status information of the CNC machine.</p>
+<p>The <code>cnc_statinfo</code> function returns a structure that contains several fields, two of which are <code>.aut</code> and <code>.run</code>.</p>
+<ul>
+<li>
+<p><code>.aut</code> field: This field represents the automatic operation mode status. It has three possible values: 0 (MDI mode), 1 (MEM mode), and 2 (EDIT mode).</p>
+</li>
+<li>
+<p><code>.run</code> field: This field represents the running status of the CNC machine in automatic mode. It has five possible values:</p>
+</li>
+<li>
+<p>0: This value is represented as "<strong>*</strong>" in the code snippet we've provided. It likely represents a default or uninitialized state.</p>
+</li>
+<li>1: This value is represented as "STOP" in the code snippet, indicating that the CNC machine is in a stopped state.</li>
+<li>2: This value is represented as "HOLD" in the code snippet, indicating that the CNC machine is in a hold or paused state. This happens when the <code>cycle stop</code> button is pressed in the machine</li>
+<li>3: This value is represented as "STRT" in the code snippet, indicating that the CNC machine is in a start or running state.</li>
+<li>4: This value is represented as "MSTR" in the code snippet, indicating that the CNC machine is in a master or controlling state.</li>
+</ul>
+<p>The "default" case in the switch statement is used to handle any other values that the <code>.run</code> field might have. In this case, it returns "UNAVAILABLE", indicating that the running status of the CNC machine is not available or not recognized.</p>
+<h5 id="sample-sequence-of-machine-state">SAMPLE SEQUENCE OF MACHINE STATE</h5>
+<p>The following table shows a sample sequence of machine states and their corresponding execution mode and running status</p>
+<table>
+<thead>
+<tr>
+<th>S.No</th>
+<th>Actual Machine State</th>
+<th>Execution Mode (From Focas)</th>
+<th>Execution Mode (Mapped Value)</th>
+<th>Running Status (From Focas)</th>
+<th>Running Status (Mapped Value)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>Machine is in auto Mode, a cycle has been started and it's running</td>
+<td>1</td>
+<td>MEM</td>
+<td>3</td>
+<td>STRT</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>Machine is in auto Mode, a cycle has ended from previous state</td>
+<td>1</td>
+<td>MEM</td>
+<td>0</td>
+<td>***</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>Auto Mode, cycle start &amp; Running</td>
+<td>1</td>
+<td>MEM</td>
+<td>3</td>
+<td>STRT</td>
+</tr>
+<tr>
+<td>4.</td>
+<td>Auto Mode, cycle suspend in middle (pressed the cycle stop button in fanuc controller)</td>
+<td>1</td>
+<td>MEM</td>
+<td>2</td>
+<td>HOLD</td>
+</tr>
+<tr>
+<td>5.</td>
+<td>Auto Mode, cycle resume after suspend</td>
+<td>1</td>
+<td>MEM</td>
+<td>3</td>
+<td>STRT</td>
+</tr>
+<tr>
+<td>6.</td>
+<td>Auto Mode, cycle suspend in middle</td>
+<td>1</td>
+<td>MEM</td>
+<td>2</td>
+<td>HOLD</td>
+</tr>
+<tr>
+<td>7.</td>
+<td>Auto Mode, cycle cancelled (cancelled after suspend, cycle did not get over, by pressing reset button)</td>
+<td>1</td>
+<td>MEM</td>
+<td>0</td>
+<td>***</td>
+</tr>
+<tr>
+<td>8.</td>
+<td>Auto Mode, cycle stop (nothing going), emergency button</td>
+<td>1</td>
+<td>MEM</td>
+<td>0</td>
+<td>***</td>
+</tr>
+<tr>
+<td>9.</td>
+<td>Emergency button released (from previous step)</td>
+<td>1</td>
+<td>MEM</td>
+<td>0</td>
+<td>***</td>
+</tr>
+<tr>
+<td>10.</td>
+<td>Auto Mode, cycle start, emergency button pressed</td>
+<td>1</td>
+<td>MEM</td>
+<td>0</td>
+<td>***</td>
+</tr>
+<tr>
+<td>11.</td>
+<td>Emergency button released (from previous step)</td>
+<td>1</td>
+<td>MEM</td>
+<td>0</td>
+<td>***</td>
+</tr>
+<tr>
+<td>12.</td>
+<td>MDI Mode</td>
+<td>0</td>
+<td>MDI</td>
+<td>1</td>
+<td>STOP</td>
+</tr>
+<tr>
+<td>13.</td>
+<td>EDIT Mode</td>
+<td>3</td>
+<td>EDIT</td>
+<td>0</td>
+<td>***</td>
+</tr>
+<tr>
+<td>14.</td>
+<td>MPG Mode</td>
+<td>4</td>
+<td>MPG (Hand Wheel)</td>
+<td>0</td>
+<td>***</td>
+</tr>
+<tr>
+<td>15.</td>
+<td>JOG Mode</td>
+<td>5</td>
+<td>JOG</td>
+<td>0</td>
+<td>***</td>
+</tr>
+<tr>
+<td>16.</td>
+<td>REF Mode</td>
+<td>9</td>
+<td>REF</td>
+<td>0</td>
+<td>***</td>
+</tr>
+</tbody>
+</table>
+<h3 id="code-sample-4">CODE SAMPLE 4</h3>
+<h4 id="code_3">Code</h4>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="nn">System.Threading</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">namespace</span><span class="w"> </span><span class="nn">FanucFocas</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">static</span><span class="w"> </span><span class="kt">ushort</span><span class="w"> </span><span class="n">_handle</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">static</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="n">_ret</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Starting"</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">_ret</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">cnc_allclibhndl3</span><span class="p">(</span><span class="s">"172.18.30.147"</span><span class="p">,</span><span class="w"> </span><span class="m">8193</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="n">_handle</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_ret</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">EW_OK</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Cannot Connect"</span><span class="p">);</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="w">                    </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"Our Focas Handle is {_handle}"</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                </span><span class="c1">// Create a loop to continuously print machine mode and status every 2 seconds</span>
+<span class="w">                </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="k">true</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"====================="</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                    </span><span class="kt">string</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">GetMode</span><span class="p">();</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"Mode is {mode}"</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                    </span><span class="kt">string</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">GetStatus</span><span class="p">();</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"Status is {status}"</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"====================="</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                    </span><span class="c1">// Wait for 2 seconds before the next iteration</span>
+<span class="w">                    </span><span class="n">Thread</span><span class="p">.</span><span class="n">Sleep</span><span class="p">(</span><span class="m">2000</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">Focas1</span><span class="p">.</span><span class="n">cnc_freelibhndl</span><span class="p">(</span><span class="n">_handle</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">GetMode</span><span class="p">()</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_handle</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Get a handle"</span><span class="p">);</span><span class="w"></span>
+<span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="s">""</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">Focas1</span><span class="p">.</span><span class="n">ODBST</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">ODBST</span><span class="p">();</span><span class="w"></span>
+<span class="w">                </span><span class="n">_ret</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">cnc_statinfo</span><span class="p">(</span><span class="n">_handle</span><span class="p">,</span><span class="w"> </span><span class="n">mode</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_ret</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Error: Cannot obtain mode data"</span><span class="p">);</span><span class="w"></span>
+<span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="s">""</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">mode</span><span class="p">.</span><span class="n">aut</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="k">case</span><span class="w"> </span><span class="m">0</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"MDI"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="k">case</span><span class="w"> </span><span class="m">1</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"MEM"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="k">case</span><span class="w"> </span><span class="m">3</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"EDIT"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="k">case</span><span class="w"> </span><span class="m">4</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"MPG"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="k">case</span><span class="w"> </span><span class="m">5</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"JOG"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="k">case</span><span class="w"> </span><span class="m">6</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"Teach in JOG"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="k">case</span><span class="w"> </span><span class="m">7</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"Teach in HND"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="k">case</span><span class="w"> </span><span class="m">8</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"INC"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="k">case</span><span class="w"> </span><span class="m">9</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"REF"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="k">case</span><span class="w"> </span><span class="m">10</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"RMT"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="k">default</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"UNAVAILABLE"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">GetStatus</span><span class="p">()</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_handle</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Get a handle"</span><span class="p">);</span><span class="w"></span>
+<span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="s">""</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">Focas1</span><span class="p">.</span><span class="n">ODBST</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">ODBST</span><span class="p">();</span><span class="w"></span>
+<span class="w">                </span><span class="n">_ret</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">cnc_statinfo</span><span class="p">(</span><span class="n">_handle</span><span class="p">,</span><span class="w"> </span><span class="n">status</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_ret</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Error: Cannot obtain status data"</span><span class="p">);</span><span class="w"></span>
+<span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="s">""</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">status</span><span class="p">.</span><span class="n">run</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="k">case</span><span class="w"> </span><span class="m">0</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"*****"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="k">case</span><span class="w"> </span><span class="m">1</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"STOP"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="k">case</span><span class="w"> </span><span class="m">2</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"HOLD"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="k">case</span><span class="w"> </span><span class="m">3</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"STRT"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="k">case</span><span class="w"> </span><span class="m">4</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"MSTR"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="k">default</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"UNAVAILABLE"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h4 id="explanation_3">EXPLANATION</h4>
+<p>The provided code is a C# program that uses the Fanuc Focas API to establish a connection with a Fanuc CNC system, retrieve the machine mode and operational status information, and continuously display them every 2 seconds. It utilizes the <code>GetMode()</code> and <code>GetStatus()</code> methods to retrieve the corresponding information.</p>
+<p><strong>Line-by-Line Explanation:</strong></p>
+<p><div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.Threading</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+The necessary namespaces are imported for the program.</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">namespace</span><span class="w"> </span><span class="nn">FanucFocas</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">ushort</span><span class="w"> </span><span class="n">_handle</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="n">_ret</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+The code defines the <code>FanucFocas</code> namespace and the <code>Program</code> class. It declares two static variables: <code>_handle</code> of type <code>ushort</code> (unsigned short) to store the Focas connection handle, and <code>_ret</code> of type <code>short</code> to store the return values of Focas API functions.</p>
+<p><div class="highlight"><pre><span></span><code><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Starting"</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">_ret</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">cnc_allclibhndl3</span><span class="p">(</span><span class="s">"172.18.30.147"</span><span class="p">,</span><span class="w"> </span><span class="m">8193</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="n">_handle</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_ret</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">EW_OK</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Cannot Connect"</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="w">                </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+The <code>Main</code> method is the entry point of the program. It starts by printing "Starting" to the console. Then, it attempts to establish a connection with the Fanuc CNC system using the <code>Focas1.cnc_allclibhndl3</code> API function, providing the IP address, port number, Focas version, and the <code>_handle</code> variable to receive the handle. If the connection fails, an error message is displayed and the program terminates.</p>
+<p><div class="highlight"><pre><span></span><code><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"Our Focas Handle is {_handle}"</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+If the connection succeeds, the obtained <code>_handle</code> value is printed to the console.</p>
+<p><div class="highlight"><pre><span></span><code><span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="k">true</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"====================="</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                </span><span class="kt">string</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">GetMode</span><span class="p">();</span><span class="w"></span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"Mode is {mode}"</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                </span><span class="kt">string</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">GetStatus</span><span class="p">();</span><span class="w"></span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"Status is {status}"</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"====================="</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">Thread</span><span class="p">.</span><span class="n">Sleep</span><span class="p">(</span><span class="m">2000</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+A <code>while</code> loop is created to continuously retrieve and display the machine mode and operational status every 2 seconds. Inside the loop, the mode and status information are obtained using the <code>GetMode()</code> and <code>GetStatus()</code> methods respectively. The information is then printed to the console with appropriate labels. The loop is paused for 2 seconds using <code>Thread.Sleep()</code> before the next iteration.</p>
+<p><div class="highlight"><pre><span></span><code><span class="w">            </span><span class="n">Focas1</span><span class="p">.</span><span class="n">cnc_freelibhndl</span><span class="p">(</span><span class="n">_handle</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+Finally, after exiting the loop, the <code>Focas1.cnc_freelibhndl</code> API function is called to free the allocated Focas library handle.</p>
+<p><div class="highlight"><pre><span></span><code><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">GetMode</span><span class="p">()</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// Mode retrieval logic</span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+The <code>GetMode()</code> method is defined to retrieve the machine mode information from the CNC system. It returns a string representation of the mode.</p>
+<p><div class="highlight"><pre><span></span><code><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">GetStatus</span><span class="p">()</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// Status retrieval logic</span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+Similarly, the <code>GetStatus()</code> method is defined to retrieve the operational status of the CNC machine. It returns a string representation of the status.</p>
+<p>The remaining part of the code contains the closing braces to close the <code>Program</code> class and <code>FanucFocas</code> namespace.</p>
+<p>Overall, the program establishes a connection with</p>
+<p>the Fanuc CNC system, retrieves and continuously displays the machine mode and operational status every 2 seconds until terminated.</p>
+<h3 id="code-sample-5">CODE SAMPLE 5</h3>
+<h4 id="code_4">Code</h4>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.Threading</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">FanucFocas</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">ushort</span><span class="w"> </span><span class="n">_handle</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="n">_ret</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Starting"</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">_ret</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">cnc_allclibhndl3</span><span class="p">(</span><span class="s">"172.18.30.147"</span><span class="p">,</span><span class="w"> </span><span class="m">8193</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="n">_handle</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_ret</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">EW_OK</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Cannot Connect"</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="w">                </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"Our Focas Handle is {_handle}"</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">            </span><span class="c1">// Register the event handler for Ctrl+C or closing the terminal window</span>
+<span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">CancelKeyPress</span><span class="w"> </span><span class="p">+=</span><span class="w"> </span><span class="n">Console_CancelKeyPress</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">try</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="c1">// Create a loop to continuously print machine mode, status, and active program every 2 seconds</span>
+<span class="w">                </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="k">true</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"====================="</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                    </span><span class="kt">string</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">GetMode</span><span class="p">();</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"Mode is {mode}"</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                    </span><span class="kt">string</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">GetStatus</span><span class="p">();</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"Status is {status}"</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">GetExecutionProgram</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"====================="</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                    </span><span class="c1">// Wait for 2 seconds before the next iteration</span>
+<span class="w">                    </span><span class="n">Thread</span><span class="p">.</span><span class="n">Sleep</span><span class="p">(</span><span class="m">2000</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="k">finally</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="c1">// Free the Focas handle when the loop exits</span>
+<span class="w">                </span><span class="n">Focas1</span><span class="p">.</span><span class="n">cnc_freelibhndl</span><span class="p">(</span><span class="n">_handle</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Console_CancelKeyPress</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">ConsoleCancelEventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// Cancel the event to prevent termination</span>
+<span class="w">            </span><span class="n">e</span><span class="p">.</span><span class="n">Cancel</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">            </span><span class="c1">// Exit the program gracefully</span>
+<span class="w">            </span><span class="n">Environment</span><span class="p">.</span><span class="n">Exit</span><span class="p">(</span><span class="m">0</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">GetMode</span><span class="p">()</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_handle</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Get a handle"</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="s">""</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">Focas1</span><span class="p">.</span><span class="n">ODBST</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">ODBST</span><span class="p">();</span><span class="w"></span>
+<span class="w">            </span><span class="n">_ret</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">cnc_statinfo</span><span class="p">(</span><span class="n">_handle</span><span class="p">,</span><span class="w"> </span><span class="n">mode</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_ret</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Error: Cannot obtain mode data"</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="s">""</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">mode</span><span class="p">.</span><span class="n">aut</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">0</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"MDI"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">1</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"MEM"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">3</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"EDIT"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">4</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"MPG"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">5</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"JOG"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">6</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"Teach in JOG"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">7</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"Teach in HND"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">8</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"INC"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">9</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"REF"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">10</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"RMT"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">default</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"UNAVAILABLE"</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">GetStatus</span><span class="p">()</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_handle</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Get a handle"</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="s">""</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">Focas1</span><span class="p">.</span><span class="n">ODBST</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">ODBST</span><span class="p">();</span><span class="w"></span>
+<span class="w">            </span><span class="n">_ret</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">cnc_statinfo</span><span class="p">(</span><span class="n">_handle</span><span class="p">,</span><span class="w"> </span><span class="n">status</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_ret</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Error: Cannot obtain status data"</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="s">""</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">status</span><span class="p">.</span><span class="n">run</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">0</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"*****"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">1</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"STOP"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">2</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"HOLD"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">3</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"STRT"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">4</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"MSTR"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">default</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"UNAVAILABLE"</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">GetExecutionProgram</span><span class="p">()</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_handle</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Get a handle"</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">Focas1</span><span class="p">.</span><span class="n">ODBEXEPRG</span><span class="w"> </span><span class="n">prg_info</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">ODBEXEPRG</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">_ret</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">cnc_exeprgname</span><span class="p">(</span><span class="n">_handle</span><span class="p">,</span><span class="w"> </span><span class="n">prg_info</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_ret</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Error: Cannot obtain program data"</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="kt">string</span><span class="w"> </span><span class="n">programName</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">string</span><span class="p">(</span><span class="n">prg_info</span><span class="p">.</span><span class="n">name</span><span class="p">).</span><span class="n">TrimEnd</span><span class="p">(</span><span class="sc">'\0'</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"Executing Program Name: {programName}"</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h4 id="explanation_4">Explanation</h4>
+<p>The provided code is a C# program that interacts with a FANUC CNC machine using the Focas library. It connects to the CNC machine, retrieves information about the machine's mode, status, and active program, and continuously prints this information every 2 seconds.</p>
+<p>Let's go through the code step by step:</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.Threading</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+The code includes necessary namespaces for the program.</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">namespace</span><span class="w"> </span><span class="nn">FanucFocas</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">ushort</span><span class="w"> </span><span class="n">_handle</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="n">_ret</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+The code defines a namespace (<code>FanucFocas</code>) and a class (<code>Program</code>). It also declares two static variables <code>_handle</code> (of type <code>ushort</code>) and <code>_ret</code> (of type <code>short</code>) to store the Focas handle and return value respectively.</p>
+<p><div class="highlight"><pre><span></span><code><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Starting"</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">_ret</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">cnc_allclibhndl3</span><span class="p">(</span><span class="s">"172.18.30.147"</span><span class="p">,</span><span class="w"> </span><span class="m">8193</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="n">_handle</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_ret</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">EW_OK</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Cannot Connect"</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span><span class="w"></span>
+<span class="w">                </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+The <code>Main</code> method is the entry point of the program. It first prints "Starting" to the console. Then it calls the <code>cnc_allclibhndl3</code> function from the Focas library to establish a connection with the CNC machine using the specified IP address ("172.18.30.147"), port number (8193), and timeout (6 seconds). The Focas handle is stored in the <code>_handle</code> variable, and the return value is stored in the <code>_ret</code> variable.</p>
+<p>If the connection is unsuccessful (return value is not equal to <code>Focas1.EW_OK</code>), it prints "Cannot Connect" and waits for user input before exiting the program.</p>
+<p><div class="highlight"><pre><span></span><code><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"Our Focas Handle is {_handle}"</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">            </span><span class="c1">// Register the event handler for Ctrl+C or closing the terminal window</span>
+<span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">CancelKeyPress</span><span class="w"> </span><span class="p">+=</span><span class="w"> </span><span class="n">Console_CancelKeyPress</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">try</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="c1">// Create a loop to continuously print machine mode, status, and active program every 2 seconds</span>
+<span class="w">                </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="k">true</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"====================="</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                    </span><span class="kt">string</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">GetMode</span><span class="p">();</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"Mode is {mode}"</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                    </span><span class="kt">string</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">GetStatus</span><span class="p">();</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"Status is {status}"</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">GetExecutionProgram</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"====================="</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                    </span><span class="c1">// Wait for 2 seconds before the next iteration</span>
+<span class="w">                    </span><span class="n">Thread</span><span class="p">.</span><span class="n">Sleep</span><span class="p">(</span><span class="m">2000</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="k">finally</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="c1">// Free the Focas handle when the loop exits</span>
+<span class="w">                </span><span class="n">Focas1</span><span class="p">.</span><span class="n">cnc_freelibhndl</span><span class="p">(</span><span class="n">_handle</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+The program then prints the obtained Focas handle to the console. It registers the <code>Console_CancelKeyPress</code> method as an event handler for the Ctrl+C key press or closing the terminal window. This ensures that the program exits gracefully when these events occur.</p>
+<p>Inside the <code>try</code> block, the program enters a loop that continuously retrieves and prints information about the machine's mode, status, and active program every 2 seconds.</p>
+<p>The <code>GetMode()</code> method is called to retrieve the current machine mode, which is then printed to the console.</p>
+<p>The <code>GetStatus()</code> method is called to retrieve the current machine status, which is also printed to the console.</p>
+<p>The <code>GetExecutionProgram()</code> method is called to retrieve the name of the currently executing program on the machine, which is printed to the console.</p>
+<p>After printing the information, the program waits for</p>
+<p>2 seconds using <code>Thread.Sleep(2000)</code> before the next iteration of the loop.</p>
+<p>Finally, in the <code>finally</code> block, the Focas handle is released using the <code>cnc_freelibhndl</code> function to free up resources when the program exits.</p>
+<p><div class="highlight"><pre><span></span><code><span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Console_CancelKeyPress</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">ConsoleCancelEventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// Cancel the event to prevent termination</span>
+<span class="w">            </span><span class="n">e</span><span class="p">.</span><span class="n">Cancel</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">            </span><span class="c1">// Exit the program gracefully</span>
+<span class="w">            </span><span class="n">Environment</span><span class="p">.</span><span class="n">Exit</span><span class="p">(</span><span class="m">0</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+The <code>Console_CancelKeyPress</code> method is an event handler that is triggered when the Ctrl+C key is pressed or the terminal window is closed. It cancels the event (<code>e.Cancel = true</code>) to prevent immediate termination of the program. Then it gracefully exits the program using <code>Environment.Exit(0)</code>.</p>
+<p><div class="highlight"><pre><span></span><code><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">GetMode</span><span class="p">()</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_handle</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Get a handle"</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="s">""</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">Focas1</span><span class="p">.</span><span class="n">ODBST</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">ODBST</span><span class="p">();</span><span class="w"></span>
+<span class="w">            </span><span class="n">_ret</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">cnc_statinfo</span><span class="p">(</span><span class="n">_handle</span><span class="p">,</span><span class="w"> </span><span class="n">mode</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_ret</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Error: Cannot obtain mode data"</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="s">""</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">mode</span><span class="p">.</span><span class="n">aut</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">0</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"MDI"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">1</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"MEM"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">3</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"EDIT"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">4</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"MPG"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">5</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"JOG"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">6</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"Teach in JOG"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">7</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"Teach in HND"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">8</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"INC"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">9</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"REF"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">10</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"RMT"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">default</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"UNAVAILABLE"</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+The <code>GetMode()</code> method retrieves the current machine mode. It first checks if a valid Focas handle exists. If not, it prints "Get a handle" and returns an empty string.</p>
+<p>It creates an instance of the <code>Focas1.ODBST</code> structure to store the mode information. Then it calls the <code>cnc_statinfo</code> function to retrieve the mode data using the Focas handle. The return value is stored in the <code>_ret</code> variable.</p>
+<p>If an error occurs during the retrieval (return value is not equal to 0), it prints "Error: Cannot obtain mode data" and returns an empty string.</p>
+<p>Otherwise, it uses a <code>switch</code> statement on the <code>mode.aut</code> value to determine the mode and returns the corresponding string representation.</p>
+<p><div class="highlight"><pre><span></span><code><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">GetStatus</span><span class="p">()</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_handle</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Get a handle"</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="s">""</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">Focas1</span><span class="p">.</span><span class="n">ODBST</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">ODBST</span><span class="p">();</span><span class="w"></span>
+<span class="w">            </span><span class="n">_ret</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">cnc_statinfo</span><span class="p">(</span><span class="n">_handle</span><span class="p">,</span><span class="w"> </span><span class="n">status</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_ret</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Error: Cannot obtain status data"</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="s">""</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">status</span><span class="p">.</span><span class="n">run</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">0</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"*****"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">1</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"STOP"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">2</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"HOLD"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">3</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"STRT"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="m">4</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"MSTR"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">default</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">"UNAVAILABLE"</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+The <code>GetStatus()</code> method retrieves the current machine status. It follows a similar structure as the <code>GetMode()</code> method.</p>
+<p>It first checks if a valid Focas handle exists. If not, it prints "Get a handle" and returns an empty string</p>
+<p>.</p>
+<p>It creates an instance of the <code>Focas1.ODBST</code> structure to store the status information. Then it calls the <code>cnc_statinfo</code> function to retrieve the status data using the Focas handle. The return value is stored in the <code>_ret</code> variable.</p>
+<p>If an error occurs during the retrieval (return value is not equal to 0), it prints "Error: Cannot obtain status data" and returns an empty string.</p>
+<p>Otherwise, it uses a <code>switch</code> statement on the <code>status.run</code> value to determine the status and returns the corresponding string representation.</p>
+<div class="highlight"><pre><span></span><code><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">GetExecutionProgram</span><span class="p">()</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_handle</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Get a handle"</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">Focas1</span><span class="p">.</span><span class="n">ODBEXEPRG</span><span class="w"> </span><span class="n">prg_info</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">ODBEXEPRG</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">_ret</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Focas1</span><span class="p">.</span><span class="n">cnc_exeprgname</span><span class="p">(</span><span class="n">_handle</span><span class="p">,</span><span class="w"> </span><span class="n">prg_info</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_ret</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Error: Cannot obtain program data"</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="kt">string</span><span class="w"> </span><span class="n">programName</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">string</span><span class="p">(</span><span class="n">prg_info</span><span class="p">.</span><span class="n">name</span><span class="p">).</span><span class="n">TrimEnd</span><span class="p">(</span><span class="sc">'\0'</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"Executing Program Name: {programName}"</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>The <code>GetExecutionProgram()</code> method retrieves the name of the currently executing program on the machine.</p>
+<p>It first checks if a valid Focas handle exists. If not, it prints "Get a handle" and returns.</p>
+<p>It creates an instance of the <code>Focas1.ODBEXEPRG</code> structure to store the program information. Then it calls the <code>cnc_exeprgname</code> function to retrieve the program data using the Focas handle. The return value is stored in the <code>_ret</code> variable.</p>
+<p>If an error occurs during the retrieval (return value is not equal to 0), it prints "Error: Cannot obtain program data" and returns.</p>
+<p>Otherwise, it converts the program name from a null-terminated character array to a string by creating a new string and trimming the null character (<code>'\0'</code>) at the end. The program name is then printed to the console.</p>
+<p>That's a walkthrough of the provided code! It connects to a FANUC CNC machine, retrieves and prints information about the machine's mode, status, and active program in a continuous loop. It handles graceful program termination and cleanup when necessary.</p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: KPIs in Manufacturing" class="md-footer__link md-footer__link--prev" href="../KPI%20in%20Manufacturing/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              KPIs in Manufacturing
+            </div>
+</div>
+</a>
+<a aria-label="Next: Machines" class="md-footer__link md-footer__link--next" href="../../Project%20Knowledge/Machines/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              Machines
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      For the Love of Manufacturing ❤️
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.078830c0.min.js"></script>
+<script src="../../javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+</html>
